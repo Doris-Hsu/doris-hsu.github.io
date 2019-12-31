@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   deepvision-vehicle:
   - appVersion: 1.1.1
-    created: "2019-12-31T17:28:12.342715455+08:00"
+    created: "2019-12-31T17:28:26.40094404+08:00"
     description: Deepvision Vehicle
     digest: b309679f8f46c166abda8422711d3c5a61bb96c5360caf05fce69cd5424d17aa
     name: deepvision-vehicle
@@ -11,7 +11,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: 1.1.1
-    created: "2019-12-31T17:28:12.342104127+08:00"
+    created: "2019-12-31T17:28:26.400545439+08:00"
     description: Deepvision Vehicle
     digest: 9f03862878e56c84f7e76d4d93333aba799254c7dbf8f5d05881669b54104526
     name: deepvision-vehicle
@@ -20,7 +20,7 @@ entries:
     version: 1.0.0
   ironyun-ainvr:
   - appVersion: 3.1.0-3
-    created: "2019-12-31T17:28:12.344158586+08:00"
+    created: "2019-12-31T17:28:26.401783768+08:00"
     description: Ironyun AINVR
     digest: ec8af3e3713937aaf21b7040a2f9e1666e059c287a06b0ff4a1955e618bfc43a
     name: ironyun-ainvr
@@ -29,11 +29,11 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: 3.1.0-3
-    created: "2019-12-31T17:28:12.343475443+08:00"
+    created: "2019-12-31T17:28:26.40134275+08:00"
     description: Ironyun AINVR
     digest: f77536bb32ff9bdb34ac74bd5a7ef5d64379eea3213216ca8d3db40bacd31060
     name: ironyun-ainvr
     urls:
     - https://doris-hsu.github.io/charts/ironyun-ainvr-1.0.0.tgz
     version: 1.0.0
-generated: "2019-12-31T17:28:12.316397649+08:00"
+generated: "2019-12-31T17:28:26.39993989+08:00"
