@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   anyvision-better-tomorrow:
   - appVersion: 1.23.1
-    created: "2020-02-14T16:29:21.924419169+08:00"
+    created: "2020-02-14T16:29:36.194617385+08:00"
     description: Helm Chart for anyvision-better-tomorrow
     digest: 94b398a7785049effe3a6ff600f111ee72a2bdaf26a7aa093cce427dd9a82639
     keywords:
@@ -14,7 +14,7 @@ entries:
     version: 1.0.0
   deepvision-demographics:
   - appVersion: 2.1.1
-    created: "2020-02-14T16:29:21.924731921+08:00"
+    created: "2020-02-14T16:29:36.194922767+08:00"
     description: Deepvision Demographics
     digest: d816e3d6561412e6126ad6559f676a36ba1adc9ddb58763ea880b302fc668049
     name: deepvision-demographics
@@ -23,7 +23,7 @@ entries:
     version: 1.0.2
   deepvision-recognition:
   - appVersion: 3.1.2
-    created: "2020-02-14T16:29:21.930781018+08:00"
+    created: "2020-02-14T16:29:36.195322175+08:00"
     description: Deepvision Recognition
     digest: 930ebd9905e4387ef3747604e77dd462872073effb588c834aa8a5d965c29599
     name: deepvision-recognition
@@ -32,7 +32,7 @@ entries:
     version: 1.0.2
   deepvision-vehicle:
   - appVersion: 1.1.1
-    created: "2020-02-14T16:29:21.972889328+08:00"
+    created: "2020-02-14T16:29:36.196192048+08:00"
     description: Deepvision Vehicle
     digest: 5db20af264526806347c6d482aa7a43f7d8b572e4edc978b5c7149532c3e5b35
     name: deepvision-vehicle
@@ -40,7 +40,7 @@ entries:
     - https://doris-hsu.github.io/charts/deepvision-vehicle-1.0.2.tgz
     version: 1.0.2
   - appVersion: 1.1.1
-    created: "2020-02-14T16:29:21.959061928+08:00"
+    created: "2020-02-14T16:29:36.19588744+08:00"
     description: Deepvision Vehicle
     digest: b309679f8f46c166abda8422711d3c5a61bb96c5360caf05fce69cd5424d17aa
     name: deepvision-vehicle
@@ -49,7 +49,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: 1.1.1
-    created: "2020-02-14T16:29:21.948379984+08:00"
+    created: "2020-02-14T16:29:36.195606907+08:00"
     description: Deepvision Vehicle
     digest: 9f03862878e56c84f7e76d4d93333aba799254c7dbf8f5d05881669b54104526
     name: deepvision-vehicle
@@ -58,7 +58,7 @@ entries:
     version: 1.0.0
   ironyun-ainvr:
   - appVersion: 3.1.0-3
-    created: "2020-02-14T16:29:21.978377896+08:00"
+    created: "2020-02-14T16:29:36.197016806+08:00"
     description: Ironyun AINVR
     digest: 5c22077ecd28138a378753ce4f1f409b5fddc8eef1704002a65b4d2a413b8305
     name: ironyun-ainvr
@@ -66,7 +66,7 @@ entries:
     - https://doris-hsu.github.io/charts/ironyun-ainvr-1.0.2.tgz
     version: 1.0.2
   - appVersion: 3.1.0-3
-    created: "2020-02-14T16:29:21.977881618+08:00"
+    created: "2020-02-14T16:29:36.196763319+08:00"
     description: Ironyun AINVR
     digest: ec8af3e3713937aaf21b7040a2f9e1666e059c287a06b0ff4a1955e618bfc43a
     name: ironyun-ainvr
@@ -75,7 +75,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: 3.1.0-3
-    created: "2020-02-14T16:29:21.97331485+08:00"
+    created: "2020-02-14T16:29:36.196451228+08:00"
     description: Ironyun AINVR
     digest: f77536bb32ff9bdb34ac74bd5a7ef5d64379eea3213216ca8d3db40bacd31060
     name: ironyun-ainvr
@@ -85,11 +85,11 @@ entries:
   video-analytics-demo:
   - apiVersion: v1
     appVersion: "1.2"
-    created: "2020-02-14T16:29:21.993841346+08:00"
+    created: "2020-02-14T16:29:36.197274977+08:00"
     description: A Helm chart for Deepstream Intelligent Video Analytics
     digest: 964b1b8e7822dd23b6c4f64cad225283738291b563e970b97da70f40a00d94aa
     name: video-analytics-demo
     urls:
     - https://doris-hsu.github.io/charts/video-analytics-demo-0.1.2.tgz
     version: 0.1.2
-generated: "2020-02-14T16:29:21.905040779+08:00"
+generated: "2020-02-14T16:29:36.193468064+08:00"
