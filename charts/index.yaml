@@ -3,7 +3,7 @@ entries:
   anyvision-better-tomorrow:
   - apiVersion: v1
     appVersion: 1.23.1
-    created: "2020-08-20T16:13:22.723883096+08:00"
+    created: "2020-08-20T16:31:19.348352105+08:00"
     description: Helm Chart for anyvision-better-tomorrow
     digest: 94b398a7785049effe3a6ff600f111ee72a2bdaf26a7aa093cce427dd9a82639
     keywords:
@@ -13,10 +13,27 @@ entries:
     urls:
     - https://doris-hsu.github.io/charts/anyvision-better-tomorrow-1.0.0.tgz
     version: 1.0.0
+  app2-helm-dependance:
+  - apiVersion: v1
+    appVersion: 1.0.0
+    created: "2020-08-20T16:31:19.349047598+08:00"
+    dependencies:
+    - name: tdcsqa-nginx-doris
+      repository: https://leow1986.github.io/charts/
+      version: 0.0.1
+    - name: inference-caffe
+      repository: https://leow1986.github.io/charts/
+      version: 0.1.0
+    description: private-org helm dependancies
+    digest: 8a6d96e8dc7533298011cce8d77becc47be9620f947a48c615cd8390941a35f3
+    name: app2-helm-dependance
+    urls:
+    - https://doris-hsu.github.io/charts/app2-helm-dependance-1.0.0.tgz
+    version: 1.0.0
   deepvision-demographics:
   - apiVersion: v1
     appVersion: 2.1.1
-    created: "2020-08-20T16:13:22.725937207+08:00"
+    created: "2020-08-20T16:31:19.349493269+08:00"
     description: Deepvision Demographics
     digest: d816e3d6561412e6126ad6559f676a36ba1adc9ddb58763ea880b302fc668049
     name: deepvision-demographics
@@ -26,7 +43,7 @@ entries:
   deepvision-recognition:
   - apiVersion: v1
     appVersion: 3.1.2
-    created: "2020-08-20T16:13:22.744833277+08:00"
+    created: "2020-08-20T16:31:19.350012594+08:00"
     description: Deepvision Recognition
     digest: 930ebd9905e4387ef3747604e77dd462872073effb588c834aa8a5d965c29599
     name: deepvision-recognition
@@ -36,7 +53,7 @@ entries:
   deepvision-vehicle:
   - apiVersion: v1
     appVersion: 1.1.1
-    created: "2020-08-20T16:13:22.820565739+08:00"
+    created: "2020-08-20T16:31:19.351900618+08:00"
     description: Deepvision Vehicle
     digest: 5db20af264526806347c6d482aa7a43f7d8b572e4edc978b5c7149532c3e5b35
     name: deepvision-vehicle
@@ -45,7 +62,7 @@ entries:
     version: 1.0.2
   - apiVersion: v1
     appVersion: 1.1.1
-    created: "2020-08-20T16:13:22.819336833+08:00"
+    created: "2020-08-20T16:31:19.351474946+08:00"
     description: Deepvision Vehicle
     digest: b309679f8f46c166abda8422711d3c5a61bb96c5360caf05fce69cd5424d17aa
     name: deepvision-vehicle
@@ -54,7 +71,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: 1.1.1
-    created: "2020-08-20T16:13:22.799731281+08:00"
+    created: "2020-08-20T16:31:19.350729148+08:00"
     description: Deepvision Vehicle
     digest: 9f03862878e56c84f7e76d4d93333aba799254c7dbf8f5d05881669b54104526
     name: deepvision-vehicle
@@ -64,7 +81,7 @@ entries:
   gpu-hog:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-08-20T16:13:22.841894149+08:00"
+    created: "2020-08-20T16:31:19.352082134+08:00"
     description: A Helm chart to produce non-stopping gpu workload
     digest: 8529801a84f3ef720eccfe1f2e6efae7247aeabd32da4aeb1040d023ce22199b
     name: gpu-hog
@@ -74,7 +91,7 @@ entries:
   ironyun-ainvr:
   - apiVersion: v1
     appVersion: 3.1.0-3
-    created: "2020-08-20T16:13:22.843317957+08:00"
+    created: "2020-08-20T16:31:19.353103734+08:00"
     description: Ironyun AINVR
     digest: 5c22077ecd28138a378753ce4f1f409b5fddc8eef1704002a65b4d2a413b8305
     name: ironyun-ainvr
@@ -83,7 +100,7 @@ entries:
     version: 1.0.2
   - apiVersion: v1
     appVersion: 3.1.0-3
-    created: "2020-08-20T16:13:22.84283255+08:00"
+    created: "2020-08-20T16:31:19.352760603+08:00"
     description: Ironyun AINVR
     digest: ec8af3e3713937aaf21b7040a2f9e1666e059c287a06b0ff4a1955e618bfc43a
     name: ironyun-ainvr
@@ -92,7 +109,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: 3.1.0-3
-    created: "2020-08-20T16:13:22.842366774+08:00"
+    created: "2020-08-20T16:31:19.352407525+08:00"
     description: Ironyun AINVR
     digest: f77536bb32ff9bdb34ac74bd5a7ef5d64379eea3213216ca8d3db40bacd31060
     name: ironyun-ainvr
@@ -102,7 +119,7 @@ entries:
   local-path-provisioner:
   - apiVersion: v1
     appVersion: v0.0.14
-    created: "2020-08-20T16:13:22.862009183+08:00"
+    created: "2020-08-20T16:31:19.353612106+08:00"
     description: Use HostPath for persistent local storage with Kubernetes
     digest: beb656a82c5d8d3b07020cea30b98bd4bfc152ee76488383353cdd6cc32c4ab1
     home: https://github.com/rancher/local-path-provisioner
@@ -119,7 +136,7 @@ entries:
   myco-hello:
   - apiVersion: v2
     appVersion: 2.0.0
-    created: "2020-08-20T16:13:22.871708757+08:00"
+    created: "2020-08-20T16:31:19.354206273+08:00"
     description: MyCo's Hello World sample Helm Chart
     digest: 731c159ecd3c6618423c0a74ac266c45e832d2bc7d6bf45fedb731f2f841e79d
     name: myco-hello
@@ -129,7 +146,7 @@ entries:
   nginx-helm-dependance:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2020-08-20T16:13:22.872606752+08:00"
+    created: "2020-08-20T16:31:19.360397508+08:00"
     dependencies:
     - name: tdcsqa-nginx-doris
       repository: https://leow1986.github.io/charts/
@@ -143,11 +160,11 @@ entries:
   video-analytics-demo:
   - apiVersion: v1
     appVersion: "1.2"
-    created: "2020-08-20T16:13:22.873592831+08:00"
+    created: "2020-08-20T16:31:19.360857043+08:00"
     description: A Helm chart for Deepstream Intelligent Video Analytics
     digest: 964b1b8e7822dd23b6c4f64cad225283738291b563e970b97da70f40a00d94aa
     name: video-analytics-demo
     urls:
     - https://doris-hsu.github.io/charts/video-analytics-demo-0.1.2.tgz
     version: 0.1.2
-generated: "2020-08-20T16:13:22.695373301+08:00"
+generated: "2020-08-20T16:31:19.346873349+08:00"
