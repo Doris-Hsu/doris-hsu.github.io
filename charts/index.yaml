@@ -3,7 +3,7 @@ entries:
   ainvr-ngcqa2018:
   - apiVersion: v2
     appVersion: 2.0.0
-    created: "2020-10-05T13:36:27.967139119+08:00"
+    created: "2020-10-15T19:18:28.391075123+08:00"
     description: QA test MyCo's Hello World sample Helm Chart
     digest: 8febd4f6766420ae164278b104bc3e5adef06e5ccef768ef76822790210a1f63
     name: ainvr-ngcqa2018
@@ -13,7 +13,7 @@ entries:
   ainvr-ngcqa2018org:
   - apiVersion: v2
     appVersion: 2.0.0
-    created: "2020-10-05T13:36:28.00636016+08:00"
+    created: "2020-10-15T19:18:28.432219106+08:00"
     description: QA test MyCo's Hello World sample Helm Chart
     digest: f632a7b9c220dbc09458179b7989f03eaf7cc883794068ac4d8070808a1738af
     name: ainvr-ngcqa2018org
@@ -23,7 +23,7 @@ entries:
   anyvision-better-tomorrow:
   - apiVersion: v1
     appVersion: 1.23.1
-    created: "2020-10-05T13:36:28.073402464+08:00"
+    created: "2020-10-15T19:18:28.476520063+08:00"
     description: Helm Chart for anyvision-better-tomorrow
     digest: 94b398a7785049effe3a6ff600f111ee72a2bdaf26a7aa093cce427dd9a82639
     keywords:
@@ -36,7 +36,7 @@ entries:
   app2-helm-dependance:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2020-10-05T13:36:28.087801807+08:00"
+    created: "2020-10-15T19:18:28.491914393+08:00"
     dependencies:
     - name: tdcsqa-nginx-doris
       repository: https://leow1986.github.io/charts/
@@ -53,7 +53,7 @@ entries:
   avalanche:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-10-05T13:36:28.11993504+08:00"
+    created: "2020-10-15T19:18:28.50104947+08:00"
     description: A Helm chart for deloying avalanche prometheus load test to a Kubernetes
       cluster
     digest: 27ecf7e38609888022f590b2d194ac9cc7e8c2b3a43ff48d330b010aa665c40e
@@ -69,7 +69,7 @@ entries:
   deepvision-demographics:
   - apiVersion: v1
     appVersion: 2.1.1
-    created: "2020-10-05T13:36:28.120817071+08:00"
+    created: "2020-10-15T19:18:28.50171736+08:00"
     description: Deepvision Demographics
     digest: d816e3d6561412e6126ad6559f676a36ba1adc9ddb58763ea880b302fc668049
     name: deepvision-demographics
@@ -79,7 +79,7 @@ entries:
   deepvision-recognition:
   - apiVersion: v1
     appVersion: 3.1.2
-    created: "2020-10-05T13:36:28.121838112+08:00"
+    created: "2020-10-15T19:18:28.502429337+08:00"
     description: Deepvision Recognition
     digest: 930ebd9905e4387ef3747604e77dd462872073effb588c834aa8a5d965c29599
     name: deepvision-recognition
@@ -89,7 +89,7 @@ entries:
   deepvision-vehicle:
   - apiVersion: v1
     appVersion: 1.1.1
-    created: "2020-10-05T13:36:28.12455999+08:00"
+    created: "2020-10-15T19:18:28.50460849+08:00"
     description: Deepvision Vehicle
     digest: 5db20af264526806347c6d482aa7a43f7d8b572e4edc978b5c7149532c3e5b35
     name: deepvision-vehicle
@@ -98,7 +98,7 @@ entries:
     version: 1.0.2
   - apiVersion: v1
     appVersion: 1.1.1
-    created: "2020-10-05T13:36:28.123558645+08:00"
+    created: "2020-10-15T19:18:28.503977186+08:00"
     description: Deepvision Vehicle
     digest: b309679f8f46c166abda8422711d3c5a61bb96c5360caf05fce69cd5424d17aa
     name: deepvision-vehicle
@@ -107,7 +107,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: 1.1.1
-    created: "2020-10-05T13:36:28.122690824+08:00"
+    created: "2020-10-15T19:18:28.503341168+08:00"
     description: Deepvision Vehicle
     digest: 9f03862878e56c84f7e76d4d93333aba799254c7dbf8f5d05881669b54104526
     name: deepvision-vehicle
@@ -117,7 +117,7 @@ entries:
   digits-test:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-10-05T13:36:28.137080557+08:00"
+    created: "2020-10-15T19:18:28.517977946+08:00"
     description: A Helm chart for Kubernetes
     digest: de78ae2660b46f98c4dc655984596d4bd5695f0b967bed594f023a58ece52ca8
     name: digits-test
@@ -128,7 +128,7 @@ entries:
   gpu-hog:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-10-05T13:36:28.137644514+08:00"
+    created: "2020-10-15T19:18:28.518383094+08:00"
     description: A Helm chart to produce non-stopping gpu workload
     digest: 8529801a84f3ef720eccfe1f2e6efae7247aeabd32da4aeb1040d023ce22199b
     name: gpu-hog
@@ -138,7 +138,7 @@ entries:
   ironyun-ainvr:
   - apiVersion: v1
     appVersion: 3.1.0-3
-    created: "2020-10-05T13:36:28.141285151+08:00"
+    created: "2020-10-15T19:18:28.520188498+08:00"
     description: Ironyun AINVR
     digest: 5c22077ecd28138a378753ce4f1f409b5fddc8eef1704002a65b4d2a413b8305
     name: ironyun-ainvr
@@ -147,7 +147,7 @@ entries:
     version: 1.0.2
   - apiVersion: v1
     appVersion: 3.1.0-3
-    created: "2020-10-05T13:36:28.139967648+08:00"
+    created: "2020-10-15T19:18:28.519566284+08:00"
     description: Ironyun AINVR
     digest: ec8af3e3713937aaf21b7040a2f9e1666e059c287a06b0ff4a1955e618bfc43a
     name: ironyun-ainvr
@@ -156,7 +156,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: 3.1.0-3
-    created: "2020-10-05T13:36:28.138508428+08:00"
+    created: "2020-10-15T19:18:28.518942252+08:00"
     description: Ironyun AINVR
     digest: f77536bb32ff9bdb34ac74bd5a7ef5d64379eea3213216ca8d3db40bacd31060
     name: ironyun-ainvr
@@ -166,7 +166,7 @@ entries:
   local-path-provisioner:
   - apiVersion: v1
     appVersion: v0.0.14
-    created: "2020-10-05T13:36:28.144912777+08:00"
+    created: "2020-10-15T19:18:28.526873446+08:00"
     description: Use HostPath for persistent local storage with Kubernetes
     digest: beb656a82c5d8d3b07020cea30b98bd4bfc152ee76488383353cdd6cc32c4ab1
     home: https://github.com/rancher/local-path-provisioner
@@ -183,17 +183,47 @@ entries:
   myco-hello:
   - apiVersion: v2
     appVersion: 2.0.0
-    created: "2020-10-05T13:36:28.16638086+08:00"
+    created: "2020-10-15T19:18:28.561708865+08:00"
     description: MyCo's Hello World sample Helm Chart
     digest: 731c159ecd3c6618423c0a74ac266c45e832d2bc7d6bf45fedb731f2f841e79d
     name: myco-hello
     urls:
     - https://doris-hsu.github.io/charts/myco-hello-2.0.0.tgz
     version: 2.0.0
+  myco-hello-1:
+  - apiVersion: v1
+    appVersion: 2.0.0
+    created: "2020-10-15T19:18:28.527836237+08:00"
+    description: MyCo's Hello World 1 sample Helm Chart
+    digest: 24a091fe358270cc45b199487b54a594c915dc846fcebc7b5712fd6a710f3ade
+    name: myco-hello-1
+    urls:
+    - https://doris-hsu.github.io/charts/myco-hello-1-2.0.0.tgz
+    version: 2.0.0
+  myco-hello-2:
+  - apiVersion: v1
+    appVersion: 2.0.0
+    created: "2020-10-15T19:18:28.529158172+08:00"
+    description: MyCo's Hello World 2 sample Helm Chart
+    digest: 4698a9e54970a28cda6c4cc106babd355f35887f601e51de7c5e50eb4b68f807
+    name: myco-hello-2
+    urls:
+    - https://doris-hsu.github.io/charts/myco-hello-2-2.0.0.tgz
+    version: 2.0.0
+  myco-hello-3:
+  - apiVersion: v1
+    appVersion: 2.0.0
+    created: "2020-10-15T19:18:28.563284694+08:00"
+    description: MyCo's Hello World 3 sample Helm Chart
+    digest: f5e4c6973f640577e7d9633a7cf00368cd3caff32e2b0532e339cf910a45c59a
+    name: myco-hello-3
+    urls:
+    - https://doris-hsu.github.io/charts/myco-hello-3-2.0.0.tgz
+    version: 2.0.0
   myco-hello-qa:
   - apiVersion: v2
     appVersion: 2.0.0
-    created: "2020-10-05T13:36:28.182174295+08:00"
+    created: "2020-10-15T19:18:28.575207551+08:00"
     description: QA test MyCo's Hello World sample Helm Chart
     digest: 5aca003b8e05a46730e51d638da6c9cc4b2beed93a4829829914e368afaa0192
     name: myco-hello-qa
@@ -203,7 +233,7 @@ entries:
   nginx-helm-dependance:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2020-10-05T13:36:28.195258243+08:00"
+    created: "2020-10-15T19:18:28.587841583+08:00"
     dependencies:
     - name: tdcsqa-nginx-doris
       repository: https://leow1986.github.io/charts/
@@ -214,10 +244,20 @@ entries:
     urls:
     - https://doris-hsu.github.io/charts/nginx-helm-dependance-1.0.0.tgz
     version: 1.0.0
+  nvidia-deepstream-public:
+  - apiVersion: v1
+    appVersion: 5.0.0
+    created: "2020-10-15T19:18:28.589233075+08:00"
+    description: NVIDIA's Deepstream Helm Chart
+    digest: 923939516b383c98b17abf98d787563da9a44924102ed21e8dc1b35609f95b05
+    name: nvidia-deepstream-public
+    urls:
+    - https://doris-hsu.github.io/charts/nvidia-deepstream-public-5.0.0.tgz
+    version: 5.0.0
   prod-tdcnv2017-caffe:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-10-05T13:36:28.196295087+08:00"
+    created: "2020-10-15T19:18:28.589990877+08:00"
     description: A Helm chart for Kubernetes on egxqatest only
     digest: 2198d663338f7aa68d1631adaf8f632e5f503cb3b9b9380481aa32ca7eca63d1
     name: prod-tdcnv2017-caffe
@@ -227,21 +267,51 @@ entries:
   public-reg-private-caffe-py2:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-10-05T13:36:28.210256963+08:00"
+    created: "2020-10-15T19:18:28.602917647+08:00"
     description: caffe in privage org
     digest: e9a7fdfa5eb33e5edb1a2a9b43ae4ea7662ec40cceb21c403e21e598d0f1b5db
     name: public-reg-private-caffe-py2
     urls:
     - https://doris-hsu.github.io/charts/public-reg-private-caffe-py2-0.2.0.tgz
     version: 0.2.0
+  qa-nv-csp:
+  - apiVersion: v1
+    appVersion: 2.0.0
+    created: "2020-10-15T19:18:28.603640588+08:00"
+    description: MyCo's Hello World 1 sample Helm Chart
+    digest: e1621ad2e6daf4f36293863c5cc711f18ffa7cac14cef28bd84d44684ddf3e53
+    name: qa-nv-csp
+    urls:
+    - https://doris-hsu.github.io/charts/qa-nv-csp-1.0.0.tgz
+    version: 1.0.0
+  qa-pr-img:
+  - apiVersion: v1
+    appVersion: 2.0.0
+    created: "2020-10-15T19:18:28.604519479+08:00"
+    description: MyCo's Hello World 2 sample Helm Chart
+    digest: af574529967b2eeee8662ae787b9bb41899a76f5f24367f903959a69047b1145
+    name: qa-pr-img
+    urls:
+    - https://doris-hsu.github.io/charts/qa-pr-img-1.0.0.tgz
+    version: 1.0.0
+  qa-pub-img:
+  - apiVersion: v1
+    appVersion: 2.0.0
+    created: "2020-10-15T19:18:28.605324847+08:00"
+    description: MyCo's Hello World 3 sample Helm Chart
+    digest: 8f89b30315cc6db06a0347bee104c8abc19676a6e70de1c8393cb29cee13a88e
+    name: qa-pub-img
+    urls:
+    - https://doris-hsu.github.io/charts/qa-pub-img-1.0.0.tgz
+    version: 1.0.0
   video-analytics-demo:
   - apiVersion: v1
     appVersion: "1.2"
-    created: "2020-10-05T13:36:28.21220699+08:00"
+    created: "2020-10-15T19:18:28.606283995+08:00"
     description: A Helm chart for Deepstream Intelligent Video Analytics
     digest: 964b1b8e7822dd23b6c4f64cad225283738291b563e970b97da70f40a00d94aa
     name: video-analytics-demo
     urls:
     - https://doris-hsu.github.io/charts/video-analytics-demo-0.1.2.tgz
     version: 0.1.2
-generated: "2020-10-05T13:36:27.945044908+08:00"
+generated: "2020-10-15T19:18:28.378645267+08:00"
