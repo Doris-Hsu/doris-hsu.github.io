@@ -1,0 +1,7 @@
+appVersion: 1.23.1
+description: Helm Chart for anyvision-better-tomorrow
+keywords:
+- anyvision
+- better-tomorrow
+name: anyvision-better-tomorrow
+version: 1.0.0

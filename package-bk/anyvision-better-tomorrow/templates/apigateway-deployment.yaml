@@ -1,0 +1,236 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+    kompose.version: 1.20.0 (f3d54d784)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: apigateway
+  name: apigateway
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: apigateway
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+        kompose.version: 1.20.0 (f3d54d784)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/prod: "true"
+        io.kompose.service: apigateway
+    spec:
+      containers:
+      - env:
+        - name: API_HOST
+          valueFrom:
+            configMapKeyRef:
+              key: API_HOST
+              name: apigateway-env
+        - name: API_JWT_SECRET
+          valueFrom:
+            configMapKeyRef:
+              key: API_JWT_SECRET
+              name: apigateway-env
+        - name: API_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: API_PORT
+              name: apigateway-env
+        - name: CONSUL_AGENT
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_AGENT
+              name: global-env
+        - name: CONSUL_AGENT_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_AGENT_PORT
+              name: global-env
+        - name: CONSUL_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_PORT
+              name: global-env
+        - name: CONSUL_SERVER
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_SERVER
+              name: global-env
+        - name: CRT_CA_BUNDLE
+          valueFrom:
+            configMapKeyRef:
+              key: CRT_CA_BUNDLE
+              name: global-env
+        - name: CRT_CA_BUNDLE
+          valueFrom:
+            configMapKeyRef:
+              key: CRT_CA_BUNDLE
+              name: apigateway-env
+        - name: CRT_PRIVATE_KEY
+          valueFrom:
+            configMapKeyRef:
+              key: CRT_PRIVATE_KEY
+              name: global-env
+        - name: CRT_PRIVATE_KEY
+          valueFrom:
+            configMapKeyRef:
+              key: CRT_PRIVATE_KEY
+              name: apigateway-env
+        - name: DASH_API_PUBLIC_URL
+          valueFrom:
+            configMapKeyRef:
+              key: DASH_API_PUBLIC_URL
+              name: apigateway-env
+        - name: DASH_API_URL
+          valueFrom:
+            configMapKeyRef:
+              key: DASH_API_URL
+              name: apigateway-env
+        - name: ENABLE_CHOWN
+          value: "false"
+        - name: ENABLE_DOCKER_LOG
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_DOCKER_LOG
+              name: apigateway-env
+        - name: ENABLE_DOCKER_STDOUT
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_DOCKER_STDOUT
+              name: apigateway-env
+        - name: GATEWAY_HOST
+          valueFrom:
+            configMapKeyRef:
+              key: GATEWAY_HOST
+              name: apigateway-env
+        - name: GATEWAY_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: GATEWAY_PORT
+              name: apigateway-env
+        - name: GATEWAY_SECURE_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: GATEWAY_SECURE_PORT
+              name: apigateway-env
+        - name: GATEWAY_SECURE_URL
+          valueFrom:
+            configMapKeyRef:
+              key: GATEWAY_SECURE_URL
+              name: apigateway-env
+        - name: GATEWAY_URL
+          valueFrom:
+            configMapKeyRef:
+              key: GATEWAY_URL
+              name: apigateway-env
+        - name: JWT_API_PUBKEY_PATH
+          valueFrom:
+            configMapKeyRef:
+              key: JWT_API_PUBKEY_PATH
+              name: apigateway-env
+        - name: KEYS_DIR
+          valueFrom:
+            configMapKeyRef:
+              key: KEYS_DIR
+              name: apigateway-env
+        - name: KEY_NAME
+          valueFrom:
+            configMapKeyRef:
+              key: KEY_NAME
+              name: apigateway-env
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              key: MONGO_INITDB_ROOT_PASSWORD
+              name: global-env
+        - name: MONGO_INITDB_ROOT_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              key: MONGO_INITDB_ROOT_USERNAME
+              name: global-env
+        - name: RABBITMQ_DEFAULT_PASS
+          valueFrom:
+            configMapKeyRef:
+              key: RABBITMQ_DEFAULT_PASS
+              name: global-env
+        - name: RABBITMQ_DEFAULT_USER
+          valueFrom:
+            configMapKeyRef:
+              key: RABBITMQ_DEFAULT_USER
+              name: global-env
+        - name: REDIS_DEFAULT_PASS
+          valueFrom:
+            configMapKeyRef:
+              key: REDIS_DEFAULT_PASS
+              name: global-env
+        - name: REDIS_HOST
+          valueFrom:
+            configMapKeyRef:
+              key: REDIS_HOST
+              name: apigateway-env
+        - name: REDIS_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: REDIS_PORT
+              name: apigateway-env
+        - name: RUN_AS_USER
+          value: user
+        - name: TLS_AI_CRT_CA_BUNDLE
+          valueFrom:
+            configMapKeyRef:
+              key: TLS_AI_CRT_CA_BUNDLE
+              name: apigateway-env
+        - name: TLS_AI_CRT_PRIVATE_KEY
+          valueFrom:
+            configMapKeyRef:
+              key: TLS_AI_CRT_PRIVATE_KEY
+              name: apigateway-env
+        - name: TLS_DOMAIN
+          valueFrom:
+            configMapKeyRef:
+              key: TLS_DOMAIN
+              name: apigateway-env
+        - name: log_level_containerpilot
+          valueFrom:
+            configMapKeyRef:
+              key: log_level_containerpilot
+              name: global-env
+        image: {{ .Values.apigateway.image }}
+        name: apigateway
+        ports:
+        - containerPort: 8080
+        - containerPort: 9443
+        resources: {}
+        volumeMounts:
+        - mountPath: /var/www/html
+          name: apigateway-hostpath0
+        - mountPath: /home/user/api-gateway/config/keys
+          name: apigateway-hostpath1
+        - mountPath: /usr/local/share/ca-certificates
+          name: apigateway-hostpath2
+        - mountPath: /etc/localtime
+          name: apigateway-hostpath3
+          readOnly: true
+      restartPolicy: Always
+      imagePullSecrets:
+      - name: {{ .Chart.Name }}-nvidia-registrykey-secret
+      volumes:
+      - hostPath:
+          path: /storage
+        name: apigateway-hostpath0
+      - hostPath:
+          path: /ssd/apigateway/keys
+        name: apigateway-hostpath1
+      - hostPath:
+          path: /usr/local/share/ca-certificates
+        name: apigateway-hostpath2
+      - hostPath:
+          path: /etc/localtime
+        name: apigateway-hostpath3
+status: {}

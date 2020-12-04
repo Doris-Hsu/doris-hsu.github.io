@@ -1,0 +1,33 @@
+
+NOTE: This Helm Chart version does not support multi-host deployment
+
+On the deployed host:
+
+1. Get apigateway IP address using command:
+
+kubectl describe svc/apigateway | grep IP: | awk '{print $2;}'
+
+2. Add a line to /etc/hosts:
+
+<apigateway's IP> apigateway.default
+
+Using command:
+
+sudo vim /etc/hosts
+
+3. Get AnyVision Dashboard with commands:
+
+wget https://s3.eu-central-1.amazonaws.com/anyvision-dashboard/1.23.1/AnyVision-1.23.1-linux-x86_64.AppImage 
+chmod u+x AnyVision-1.23.1-linux-x8_64.AppImages
+
+4. Start AnyVision dashboard with command:
+
+./AnyVision-1.23.1-linux-x8_64.AppImages
+
+5. Make sure at least 4 minutes has elapsed since deployment
+
+6. Login to Dashboard:
+
+Credentials: admin/admin
+Service: apigateway.default
+

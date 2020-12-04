@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+    kompose.version: 1.20.0 (f3d54d784)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: dante-proxy
+  name: dante-proxy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: dante-proxy
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+        kompose.version: 1.20.0 (f3d54d784)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/prod: "true"
+        io.kompose.service: dante-proxy
+    spec:
+      initContainers:
+      - name: init-socks
+        image: {{ .Values.init.image }}
+        command: ['/bin/sh', '-c']
+        args:
+        - |
+          [ ! "$(ls -A /socks)" ] && cp -rf /tmp/socks/* /socks/;
+          true;
+        volumeMounts:
+        - mountPath: /socks
+          name: dante-proxy-hostpath1
+      containers:
+      - image: {{ .Values.danteProxy.image }}
+        name: dante-proxy
+        ports:
+        - containerPort: 1080
+        resources: {}
+        volumeMounts:
+        - mountPath: /etc/localtime
+          name: dante-proxy-hostpath0
+          readOnly: true
+        - mountPath: /etc/sockd.conf
+          name: dante-proxy-hostpath1
+          subPath: sockd.conf
+      restartPolicy: Always
+      imagePullSecrets:
+      - name: {{ .Chart.Name }}-nvidia-registrykey-secret
+      volumes:
+      - hostPath:
+          path: /etc/localtime
+        name: dante-proxy-hostpath0
+      - persistentVolumeClaim:
+          claimName: {{ .Chart.Name }}-socks-pvc
+        name: dante-proxy-hostpath1
+
+status: {}

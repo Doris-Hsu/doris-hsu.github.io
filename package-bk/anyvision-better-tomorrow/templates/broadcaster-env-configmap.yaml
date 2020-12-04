@@ -1,0 +1,12 @@
+apiVersion: v1
+data:
+  BCAST_RMQ_CONN_STRING: amqp://user:password@rabbitmq.default
+  BCAST_RMQ_ONLY_SUBJECTS: "true"
+  ENABLE_DOCKER_LOG: "false"
+  ENABLE_DOCKER_STDOUT: "true"
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: broadcaster-env
+  name: broadcaster-env

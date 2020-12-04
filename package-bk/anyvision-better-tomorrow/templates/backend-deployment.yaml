@@ -1,0 +1,874 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+    kompose.version: 1.20.0 (f3d54d784)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: backend
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: backend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+        kompose.version: 1.20.0 (f3d54d784)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/prod: "true"
+        io.kompose.service: backend
+    spec:
+      containers:
+      - command:
+        - /bin/containerpilot
+        - -config
+        - /etc/containerpilot.json5
+        env:
+        - name: AGE_EXTRACTION_GPU
+          valueFrom:
+            configMapKeyRef:
+              key: AGE_EXTRACTION_GPU
+              name: backend-env
+        - name: BACKEND_OPENSSH_PORT
+          value: "9022"
+        - name: CONSUL_AGENT
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_AGENT
+              name: global-env
+        - name: CONSUL_AGENT_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_AGENT_PORT
+              name: global-env
+        - name: CONSUL_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_PORT
+              name: global-env
+        - name: CONSUL_SERVER
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_SERVER
+              name: global-env
+        - name: CRT_CA_BUNDLE
+          valueFrom:
+            configMapKeyRef:
+              key: CRT_CA_BUNDLE
+              name: global-env
+        - name: CRT_PRIVATE_KEY
+          valueFrom:
+            configMapKeyRef:
+              key: CRT_PRIVATE_KEY
+              name: global-env
+        - name: DISPLAY
+          value: :1
+        - name: ENABLE_BUFFER_CLEANER
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_BUFFER_CLEANER
+              name: backend-env
+        - name: ENABLE_COLLATE_SERVICE
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_COLLATE_SERVICE
+              name: backend-env
+        - name: ENABLE_CONFD
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_CONFD
+              name: backend-env
+        - name: ENABLE_CONFD_TEAMPLATER
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_CONFD_TEAMPLATER
+              name: backend-env
+        - name: ENABLE_CRON_MASS_IMPORT_REPORTS
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_CRON_MASS_IMPORT_REPORTS
+              name: backend-env
+        - name: ENABLE_CRON_PIPE_IMG_TEMPORARY
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_CRON_PIPE_IMG_TEMPORARY
+              name: backend-env
+        - name: ENABLE_DOCKERIZE
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_DOCKERIZE
+              name: backend-env
+        - name: ENABLE_DOCKER_LOG
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_DOCKER_LOG
+              name: backend-env
+        - name: ENABLE_DOCKER_STDOUT
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_DOCKER_STDOUT
+              name: backend-env
+        - name: ENABLE_FRAMESTORE_CLEANER
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_FRAMESTORE_CLEANER
+              name: backend-env
+        - name: ENABLE_MKDIR
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_MKDIR
+              name: backend-env
+        - name: ENABLE_OPENSSH_SERVICE
+          value: "true"
+        - name: ENABLE_PROCESS_SERVICE
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_PROCESS_SERVICE
+              name: backend-env
+        - name: ENABLE_REDIS_SERVICE
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_REDIS_SERVICE
+              name: backend-env
+        - name: ENABLE_REID_SERVICE
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_REID_SERVICE
+              name: backend-env
+        - name: ENABLE_TRACK_ARCHIVE_SERVICE
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_TRACK_ARCHIVE_SERVICE
+              name: backend-env
+        - name: ENABLE_WATCHER
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_WATCHER
+              name: backend-env
+        - name: ENABLE_XPRA_SERVICE
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_XPRA_SERVICE
+              name: backend-env
+        - name: FEATURE_EXTRACTION_GPU
+          valueFrom:
+            configMapKeyRef:
+              key: FEATURE_EXTRACTION_GPU
+              name: backend-env
+        - name: GLOG_minloglevel
+          valueFrom:
+            configMapKeyRef:
+              key: GLOG_minloglevel
+              name: backend-env
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              key: MONGO_INITDB_ROOT_PASSWORD
+              name: global-env
+        - name: MONGO_INITDB_ROOT_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              key: MONGO_INITDB_ROOT_USERNAME
+              name: global-env
+        - name: NVIDIA_DRIVER_CAPABILITIES
+          valueFrom:
+            configMapKeyRef:
+              key: NVIDIA_DRIVER_CAPABILITIES
+              name: backend-env
+        - name: NVIDIA_VISIBLE_DEVICES
+          valueFrom:
+            configMapKeyRef:
+              key: NVIDIA_VISIBLE_DEVICES
+              name: backend-env
+        - name: RABBITMQ_DEFAULT_PASS
+          valueFrom:
+            configMapKeyRef:
+              key: RABBITMQ_DEFAULT_PASS
+              name: global-env
+        - name: RABBITMQ_DEFAULT_USER
+          valueFrom:
+            configMapKeyRef:
+              key: RABBITMQ_DEFAULT_USER
+              name: global-env
+        - name: REDIS_DEFAULT_PASS
+          valueFrom:
+            configMapKeyRef:
+              key: REDIS_DEFAULT_PASS
+              name: global-env
+        - name: REID_DATA_SERVICE_GPU
+          valueFrom:
+            configMapKeyRef:
+              key: REID_DATA_SERVICE_GPU
+              name: backend-env
+        - name: REQUESTS_CA_BUNDLE
+          valueFrom:
+            configMapKeyRef:
+              key: REQUESTS_CA_BUNDLE
+              name: backend-env
+        - name: api_service_ip
+          value: api.default
+        - name: api_service_port
+          valueFrom:
+            configMapKeyRef:
+              key: api_service_port
+              name: backend-env
+        - name: collate_service_ip
+          value: coll-localnode.default
+        - name: collate_service_port
+          valueFrom:
+            configMapKeyRef:
+              key: collate_service_port
+              name: backend-env
+        - name: external_ip
+          value: proc-localnode.default
+        - name: flask_port
+          valueFrom:
+            configMapKeyRef:
+              key: flask_port
+              name: backend-env
+        - name: frame_store_rtmp_port
+          value: "80"
+        - name: frame_store_rtmp_url
+          value: rtstreamer.default
+        - name: frame_store_storage_ip
+          value: nginx-localnode.default
+        - name: frame_store_udp_port_range
+          valueFrom:
+            configMapKeyRef:
+              key: frame_store_udp_port_range
+              name: backend-env
+        - name: log_level_containerpilot
+          valueFrom:
+            configMapKeyRef:
+              key: log_level_containerpilot
+              name: global-env
+        - name: memsql_host
+          value: memsql.default
+        - name: memsql_port
+          value: "3306"
+        - name: misc_gpu_encoding
+          value: "true"
+        - name: misc_log_level
+          valueFrom:
+            configMapKeyRef:
+              key: misc_log_level
+              name: backend-env
+        - name: misc_ssl_certificate_path
+          valueFrom:
+            configMapKeyRef:
+              key: misc_ssl_certificate_path
+              name: backend-env
+        - name: misc_ssl_key_path
+          valueFrom:
+            configMapKeyRef:
+              key: misc_ssl_key_path
+              name: backend-env
+        - name: mongodb_host
+          value: mongodb.default
+        - name: mongodb_port
+          valueFrom:
+            configMapKeyRef:
+              key: mongodb_port
+              name: backend-env
+        - name: redis_host
+          value: 127.0.0.1
+        - name: redis_port
+          valueFrom:
+            configMapKeyRef:
+              key: redis_port
+              name: backend-env
+        - name: reid_service_ip
+          value: reid-localnode.default
+        - name: reid_service_port
+          valueFrom:
+            configMapKeyRef:
+              key: reid_service_port
+              name: backend-env
+        - name: storage_ip
+          value: nginx-localnode.default
+        - name: track_archive_service_ip
+          value: arch-localnode.default
+        - name: track_archive_service_port
+          valueFrom:
+            configMapKeyRef:
+              key: track_archive_service_port
+              name: backend-env
+        - name: tracking_track_archive_loading_timeout_secs
+          valueFrom:
+            configMapKeyRef:
+              key: tracking_track_archive_loading_timeout_secs
+              name: backend-env
+        - name: tracking_tracking_storage_dir
+          valueFrom:
+            configMapKeyRef:
+              key: tracking_tracking_storage_dir
+              name: backend-env
+        - name: xvfb_screen_resolution
+          valueFrom:
+            configMapKeyRef:
+              key: xvfb_screen_resolution
+              name: backend-env
+        image: {{ .Values.backend.image }}
+        name: backend
+        ports:
+        - containerPort: 4005
+        - containerPort: 9067
+        - containerPort: 9068
+        - containerPort: 9069
+        - containerPort: 9022
+        - containerPort: 5000
+          protocol: UDP
+        - containerPort: 5001
+          protocol: UDP
+        - containerPort: 5002
+          protocol: UDP
+        - containerPort: 5003
+          protocol: UDP
+        - containerPort: 5004
+          protocol: UDP
+        - containerPort: 5005
+          protocol: UDP
+        - containerPort: 5006
+          protocol: UDP
+        - containerPort: 5007
+          protocol: UDP
+        - containerPort: 5008
+          protocol: UDP
+        - containerPort: 5009
+          protocol: UDP
+        - containerPort: 5010
+          protocol: UDP
+        - containerPort: 5011
+          protocol: UDP
+        - containerPort: 5012
+          protocol: UDP
+        - containerPort: 5013
+          protocol: UDP
+        - containerPort: 5014
+          protocol: UDP
+        - containerPort: 5015
+          protocol: UDP
+        - containerPort: 5016
+          protocol: UDP
+        - containerPort: 5017
+          protocol: UDP
+        - containerPort: 5018
+          protocol: UDP
+        - containerPort: 5019
+          protocol: UDP
+        - containerPort: 5020
+          protocol: UDP
+        - containerPort: 5021
+          protocol: UDP
+        - containerPort: 5022
+          protocol: UDP
+        - containerPort: 5023
+          protocol: UDP
+        - containerPort: 5024
+          protocol: UDP
+        - containerPort: 5025
+          protocol: UDP
+        - containerPort: 5026
+          protocol: UDP
+        - containerPort: 5027
+          protocol: UDP
+        - containerPort: 5028
+          protocol: UDP
+        - containerPort: 5029
+          protocol: UDP
+        - containerPort: 5030
+          protocol: UDP
+        - containerPort: 5031
+          protocol: UDP
+        - containerPort: 5032
+          protocol: UDP
+        - containerPort: 5033
+          protocol: UDP
+        - containerPort: 5034
+          protocol: UDP
+        - containerPort: 5035
+          protocol: UDP
+        - containerPort: 5036
+          protocol: UDP
+        - containerPort: 5037
+          protocol: UDP
+        - containerPort: 5038
+          protocol: UDP
+        - containerPort: 5039
+          protocol: UDP
+        - containerPort: 5040
+          protocol: UDP
+        - containerPort: 5041
+          protocol: UDP
+        - containerPort: 5042
+          protocol: UDP
+        - containerPort: 5043
+          protocol: UDP
+        - containerPort: 5044
+          protocol: UDP
+        - containerPort: 5045
+          protocol: UDP
+        - containerPort: 5046
+          protocol: UDP
+        - containerPort: 5047
+          protocol: UDP
+        - containerPort: 5048
+          protocol: UDP
+        - containerPort: 5049
+          protocol: UDP
+        - containerPort: 5050
+          protocol: UDP
+        - containerPort: 5051
+          protocol: UDP
+        - containerPort: 5052
+          protocol: UDP
+        - containerPort: 5053
+          protocol: UDP
+        - containerPort: 5054
+          protocol: UDP
+        - containerPort: 5055
+          protocol: UDP
+        - containerPort: 5056
+          protocol: UDP
+        - containerPort: 5057
+          protocol: UDP
+        - containerPort: 5058
+          protocol: UDP
+        - containerPort: 5059
+          protocol: UDP
+        - containerPort: 5060
+          protocol: UDP
+        - containerPort: 5061
+          protocol: UDP
+        - containerPort: 5062
+          protocol: UDP
+        - containerPort: 5063
+          protocol: UDP
+        - containerPort: 5064
+          protocol: UDP
+        - containerPort: 5065
+          protocol: UDP
+        - containerPort: 5066
+          protocol: UDP
+        - containerPort: 5067
+          protocol: UDP
+        - containerPort: 5068
+          protocol: UDP
+        - containerPort: 5069
+          protocol: UDP
+        - containerPort: 5070
+          protocol: UDP
+        - containerPort: 5071
+          protocol: UDP
+        - containerPort: 5072
+          protocol: UDP
+        - containerPort: 5073
+          protocol: UDP
+        - containerPort: 5074
+          protocol: UDP
+        - containerPort: 5075
+          protocol: UDP
+        - containerPort: 5076
+          protocol: UDP
+        - containerPort: 5077
+          protocol: UDP
+        - containerPort: 5078
+          protocol: UDP
+        - containerPort: 5079
+          protocol: UDP
+        - containerPort: 5080
+          protocol: UDP
+        - containerPort: 5081
+          protocol: UDP
+        - containerPort: 5082
+          protocol: UDP
+        - containerPort: 5083
+          protocol: UDP
+        - containerPort: 5084
+          protocol: UDP
+        - containerPort: 5085
+          protocol: UDP
+        - containerPort: 5086
+          protocol: UDP
+        - containerPort: 5087
+          protocol: UDP
+        - containerPort: 5088
+          protocol: UDP
+        - containerPort: 5089
+          protocol: UDP
+        - containerPort: 5090
+          protocol: UDP
+        - containerPort: 5091
+          protocol: UDP
+        - containerPort: 5092
+          protocol: UDP
+        - containerPort: 5093
+          protocol: UDP
+        - containerPort: 5094
+          protocol: UDP
+        - containerPort: 5095
+          protocol: UDP
+        - containerPort: 5096
+          protocol: UDP
+        - containerPort: 5097
+          protocol: UDP
+        - containerPort: 5098
+          protocol: UDP
+        - containerPort: 5099
+          protocol: UDP
+        - containerPort: 5100
+          protocol: UDP
+        - containerPort: 5101
+          protocol: UDP
+        - containerPort: 5102
+          protocol: UDP
+        - containerPort: 5103
+          protocol: UDP
+        - containerPort: 5104
+          protocol: UDP
+        - containerPort: 5105
+          protocol: UDP
+        - containerPort: 5106
+          protocol: UDP
+        - containerPort: 5107
+          protocol: UDP
+        - containerPort: 5108
+          protocol: UDP
+        - containerPort: 5109
+          protocol: UDP
+        - containerPort: 5110
+          protocol: UDP
+        - containerPort: 5111
+          protocol: UDP
+        - containerPort: 5112
+          protocol: UDP
+        - containerPort: 5113
+          protocol: UDP
+        - containerPort: 5114
+          protocol: UDP
+        - containerPort: 5115
+          protocol: UDP
+        - containerPort: 5116
+          protocol: UDP
+        - containerPort: 5117
+          protocol: UDP
+        - containerPort: 5118
+          protocol: UDP
+        - containerPort: 5119
+          protocol: UDP
+        - containerPort: 5120
+          protocol: UDP
+        - containerPort: 5121
+          protocol: UDP
+        - containerPort: 5122
+          protocol: UDP
+        - containerPort: 5123
+          protocol: UDP
+        - containerPort: 5124
+          protocol: UDP
+        - containerPort: 5125
+          protocol: UDP
+        - containerPort: 5126
+          protocol: UDP
+        - containerPort: 5127
+          protocol: UDP
+        - containerPort: 5128
+          protocol: UDP
+        - containerPort: 5129
+          protocol: UDP
+        - containerPort: 5130
+          protocol: UDP
+        - containerPort: 5131
+          protocol: UDP
+        - containerPort: 5132
+          protocol: UDP
+        - containerPort: 5133
+          protocol: UDP
+        - containerPort: 5134
+          protocol: UDP
+        - containerPort: 5135
+          protocol: UDP
+        - containerPort: 5136
+          protocol: UDP
+        - containerPort: 5137
+          protocol: UDP
+        - containerPort: 5138
+          protocol: UDP
+        - containerPort: 5139
+          protocol: UDP
+        - containerPort: 5140
+          protocol: UDP
+        - containerPort: 5141
+          protocol: UDP
+        - containerPort: 5142
+          protocol: UDP
+        - containerPort: 5143
+          protocol: UDP
+        - containerPort: 5144
+          protocol: UDP
+        - containerPort: 5145
+          protocol: UDP
+        - containerPort: 5146
+          protocol: UDP
+        - containerPort: 5147
+          protocol: UDP
+        - containerPort: 5148
+          protocol: UDP
+        - containerPort: 5149
+          protocol: UDP
+        - containerPort: 5150
+          protocol: UDP
+        - containerPort: 5151
+          protocol: UDP
+        - containerPort: 5152
+          protocol: UDP
+        - containerPort: 5153
+          protocol: UDP
+        - containerPort: 5154
+          protocol: UDP
+        - containerPort: 5155
+          protocol: UDP
+        - containerPort: 5156
+          protocol: UDP
+        - containerPort: 5157
+          protocol: UDP
+        - containerPort: 5158
+          protocol: UDP
+        - containerPort: 5159
+          protocol: UDP
+        - containerPort: 5160
+          protocol: UDP
+        - containerPort: 5161
+          protocol: UDP
+        - containerPort: 5162
+          protocol: UDP
+        - containerPort: 5163
+          protocol: UDP
+        - containerPort: 5164
+          protocol: UDP
+        - containerPort: 5165
+          protocol: UDP
+        - containerPort: 5166
+          protocol: UDP
+        - containerPort: 5167
+          protocol: UDP
+        - containerPort: 5168
+          protocol: UDP
+        - containerPort: 5169
+          protocol: UDP
+        - containerPort: 5170
+          protocol: UDP
+        - containerPort: 5171
+          protocol: UDP
+        - containerPort: 5172
+          protocol: UDP
+        - containerPort: 5173
+          protocol: UDP
+        - containerPort: 5174
+          protocol: UDP
+        - containerPort: 5175
+          protocol: UDP
+        - containerPort: 5176
+          protocol: UDP
+        - containerPort: 5177
+          protocol: UDP
+        - containerPort: 5178
+          protocol: UDP
+        - containerPort: 5179
+          protocol: UDP
+        - containerPort: 5180
+          protocol: UDP
+        - containerPort: 5181
+          protocol: UDP
+        - containerPort: 5182
+          protocol: UDP
+        - containerPort: 5183
+          protocol: UDP
+        - containerPort: 5184
+          protocol: UDP
+        - containerPort: 5185
+          protocol: UDP
+        - containerPort: 5186
+          protocol: UDP
+        - containerPort: 5187
+          protocol: UDP
+        - containerPort: 5188
+          protocol: UDP
+        - containerPort: 5189
+          protocol: UDP
+        - containerPort: 5190
+          protocol: UDP
+        - containerPort: 5191
+          protocol: UDP
+        - containerPort: 5192
+          protocol: UDP
+        - containerPort: 5193
+          protocol: UDP
+        - containerPort: 5194
+          protocol: UDP
+        - containerPort: 5195
+          protocol: UDP
+        - containerPort: 5196
+          protocol: UDP
+        - containerPort: 5197
+          protocol: UDP
+        - containerPort: 5198
+          protocol: UDP
+        - containerPort: 5199
+          protocol: UDP
+        - containerPort: 5200
+          protocol: UDP
+        - containerPort: 5201
+          protocol: UDP
+        - containerPort: 5202
+          protocol: UDP
+        - containerPort: 5203
+          protocol: UDP
+        - containerPort: 5204
+          protocol: UDP
+        - containerPort: 5205
+          protocol: UDP
+        - containerPort: 5206
+          protocol: UDP
+        - containerPort: 5207
+          protocol: UDP
+        - containerPort: 5208
+          protocol: UDP
+        - containerPort: 5209
+          protocol: UDP
+        - containerPort: 5210
+          protocol: UDP
+        - containerPort: 5211
+          protocol: UDP
+        - containerPort: 5212
+          protocol: UDP
+        - containerPort: 5213
+          protocol: UDP
+        - containerPort: 5214
+          protocol: UDP
+        - containerPort: 5215
+          protocol: UDP
+        - containerPort: 5216
+          protocol: UDP
+        - containerPort: 5217
+          protocol: UDP
+        - containerPort: 5218
+          protocol: UDP
+        - containerPort: 5219
+          protocol: UDP
+        - containerPort: 5220
+          protocol: UDP
+        - containerPort: 5221
+          protocol: UDP
+        - containerPort: 5222
+          protocol: UDP
+        - containerPort: 5223
+          protocol: UDP
+        - containerPort: 5224
+          protocol: UDP
+        - containerPort: 5225
+          protocol: UDP
+        - containerPort: 5226
+          protocol: UDP
+        - containerPort: 5227
+          protocol: UDP
+        - containerPort: 5228
+          protocol: UDP
+        - containerPort: 5229
+          protocol: UDP
+        - containerPort: 5230
+          protocol: UDP
+        - containerPort: 5231
+          protocol: UDP
+        - containerPort: 5232
+          protocol: UDP
+        - containerPort: 5233
+          protocol: UDP
+        - containerPort: 5234
+          protocol: UDP
+        - containerPort: 5235
+          protocol: UDP
+        - containerPort: 5236
+          protocol: UDP
+        - containerPort: 5237
+          protocol: UDP
+        - containerPort: 5238
+          protocol: UDP
+        - containerPort: 5239
+          protocol: UDP
+        - containerPort: 5240
+          protocol: UDP
+        - containerPort: 5241
+          protocol: UDP
+        - containerPort: 5242
+          protocol: UDP
+        - containerPort: 5243
+          protocol: UDP
+        - containerPort: 5244
+          protocol: UDP
+        - containerPort: 5245
+          protocol: UDP
+        - containerPort: 5246
+          protocol: UDP
+        - containerPort: 5247
+          protocol: UDP
+        - containerPort: 5248
+          protocol: UDP
+        - containerPort: 5249
+          protocol: UDP
+        - containerPort: 5250
+          protocol: UDP
+        resources: {}
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - mountPath: /home/user/license
+          name: backend-hostpath0
+          readOnly: true
+        - mountPath: /root/pipe_data
+          name: backend-hostpath1
+        - mountPath: /root/reid_service_data
+          name: backend-hostpath2
+        - mountPath: /var/www/html
+          name: backend-hostpath3
+        - mountPath: /usr/local/share/ca-certificates
+          name: backend-hostpath4
+        - mountPath: /tmp/.X11-unix
+          name: backend-hostpath5
+        - mountPath: /etc/localtime
+          name: backend-hostpath6
+          readOnly: true
+        workingDir: /root/backend_trunk
+      restartPolicy: Always
+      imagePullSecrets:
+      - name: {{ .Chart.Name }}-nvidia-registrykey-secret
+      volumes:
+      - hostPath:
+          path: /ssd/license
+        name: backend-hostpath0
+      - hostPath:
+          path: /ssd/pipe_data
+        name: backend-hostpath1
+      - hostPath:
+          path: /ssd/reid_service_data
+        name: backend-hostpath2
+      - hostPath:
+          path: /storage
+        name: backend-hostpath3
+      - hostPath:
+          path: /usr/local/share/ca-certificates
+        name: backend-hostpath4
+      - hostPath:
+          path: /tmp/.X11-unix
+        name: backend-hostpath5
+      - hostPath:
+          path: /etc/localtime
+        name: backend-hostpath6
+status: {}

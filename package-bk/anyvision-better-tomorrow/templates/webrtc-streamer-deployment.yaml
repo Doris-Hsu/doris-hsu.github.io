@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+    kompose.version: 1.20.0 (f3d54d784)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: webrtc-streamer
+  name: webrtc-streamer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: webrtc-streamer
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+        kompose.version: 1.20.0 (f3d54d784)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/prod: "true"
+        io.kompose.service: webrtc-streamer
+    spec:
+      containers:
+      - env:
+        - name: APIGATEWAY_IP
+          value: apigateway.default
+        - name: APIGATEWAY_PORT
+          value: "9443"
+        - name: APIGATEWAY_PROTOCOL
+          value: https
+        - name: CAMERA_INT_REQ_TIME
+          value: "1000"
+        - name: CRT_CA_BUNDLE
+          value: /usr/local/share/ca-certificates/default/default.full.with.key.pem
+        - name: NODE_RTSP_IP
+          value: rtstreamer.default
+        - name: NODE_RTSP_PORT
+          value: "80"
+        - name: NODE_RTSP_PROTOCOL
+          value: rtsp
+        - name: WAN_MODE
+          value: "false"
+        - name: WAN_STUN_URL
+          value: stun.l.google.com:19302
+        - name: WEBRTC_STREAMER_OPTIONS
+          value: -H0.0.0.0:8000s -w/webrtc-streamer/html -c/usr/local/share/ca-certificates/default/default.full.with.key.pem
+        image: {{ .Values.webrtcStreamer.image }}
+        name: webrtc-streamer
+        ports:
+        - containerPort: 8000
+        resources: {}
+        volumeMounts:
+        - mountPath: /usr/local/share/ca-certificates
+          name: webrtc-streamer-hostpath0
+      restartPolicy: Always
+      imagePullSecrets:
+      - name: {{ .Chart.Name }}-nvidia-registrykey-secret
+      volumes:
+      - hostPath:
+          path: /usr/local/share/ca-certificates
+        name: webrtc-streamer-hostpath0
+status: {}

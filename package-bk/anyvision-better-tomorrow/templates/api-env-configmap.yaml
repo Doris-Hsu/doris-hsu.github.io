@@ -1,0 +1,24 @@
+apiVersion: v1
+data:
+  ENABLE_DOCKER_LOG: "true"
+  ENABLE_DOCKER_STDOUT: "true"
+  FEATURE_TOGGLE_CRON_JOB: "false"
+  FEATURE_TOGGLE_MASTER: "false"
+  MASS_IMPORT_PORT: "9069"
+  MONGO_DB_NAME: anyVision2
+  MONGO_DB_PORT: "27017"
+  NODE_TLS_REJECT_UNAUTHORIZED: "0"
+  PORT: "3000"
+  RMQ_API_EXCHANGE_BIND_KEY: site.internal.
+  RMQ_API_NAME: internal-exchange
+  RMQ_API_PASS: password
+  RMQ_API_QUEUE_NAME: api-sync
+  RMQ_API_USER: user
+  SECURED_PORT: "5443"
+  VMS_GATEWAY_PORT: "9995"
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: api-env
+  name: api-env

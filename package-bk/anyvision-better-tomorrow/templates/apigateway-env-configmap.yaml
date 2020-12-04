@@ -1,0 +1,30 @@
+apiVersion: v1
+data:
+  API_HOST: api.default
+  API_JWT_SECRET: thehouseisonfire
+  API_PORT: "5443"
+  CRT_CA_BUNDLE: /usr/local/share/ca-certificates/default/default.full.pem
+  CRT_PRIVATE_KEY: /usr/local/share/ca-certificates/default/default.key
+  DASH_API_PUBLIC_URL: http://api.default:3000
+  DASH_API_URL: https://api.default:5443
+  ENABLE_DOCKER_LOG: "true"
+  ENABLE_DOCKER_STDOUT: "true"
+  GATEWAY_HOST: apigateway.default
+  GATEWAY_PORT: "8080"
+  GATEWAY_SECURE_PORT: "9443"
+  GATEWAY_SECURE_URL: https://apigateway.default:9443
+  GATEWAY_URL: http://apigateway.default:8080
+  JWT_API_PUBKEY_PATH: config/keys/bettertomorrowJwtSecret.pem
+  KEY_NAME: bettertomorrowJwtSecret.pem
+  KEYS_DIR: /home/user/api-gateway/config/keys
+  REDIS_HOST: redis
+  REDIS_PORT: "6379"
+  TLS_AI_CRT_CA_BUNDLE: /usr/local/share/ca-certificates/default/default.full.pem
+  TLS_AI_CRT_PRIVATE_KEY: /usr/local/share/ca-certificates/default/default.key
+  TLS_DOMAIN: '*.default'
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: apigateway-env
+  name: apigateway-env

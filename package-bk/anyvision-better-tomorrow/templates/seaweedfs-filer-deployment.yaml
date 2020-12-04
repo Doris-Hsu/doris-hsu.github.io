@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+    kompose.version: 1.20.0 (f3d54d784)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: seaweedfs-filer
+  name: seaweedfs-filer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: seaweedfs-filer
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+        kompose.version: 1.20.0 (f3d54d784)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/prod: "true"
+        io.kompose.service: seaweedfs-filer
+    spec:
+      initContainers:
+      - name: init-seaweedfs
+        image: {{ .Values.init.image }}
+        command: ['/bin/sh', '-c']
+        args:
+        - |
+          [ ! "$(ls -A /seaweedfs)" ] && cp -rf /tmp/seaweedfs/* /seaweedfs/;
+          true;
+        volumeMounts:
+        - mountPath: /seaweedfs
+          name: seaweedfs-filer-hostpath0
+      containers:
+      - env:
+        - name: SEAWEEDFS_FILER
+          value: "1"
+        - name: SEAWEEDFS_FILER_CMD
+          value: -ip=seaweedfs-filer -master=seaweedfs-master:9333
+        - name: SEAWEEDFS_FILER_PORT
+          value: "8888"
+        - name: SEAWEEDFS_MODE
+          value: filer
+        image: {{ .Values.seaweedfs.image }}
+        name: seaweedfs-filer
+        ports:
+        - containerPort: 8888
+        resources: {}
+        volumeMounts:
+        - mountPath: /etc/seaweedfs/filer.toml
+          name: seaweedfs-filer-hostpath0
+          subPath: filer.toml
+        - mountPath: /data
+          name: seaweedfs-filer-hostpath1
+      restartPolicy: Always
+      imagePullSecrets:
+      - name: {{ .Chart.Name }}-nvidia-registrykey-secret
+      volumes:
+      - persistentVolumeClaim:
+          claimName: {{ .Chart.Name }}-seaweedfs-pvc
+        name: seaweedfs-filer-hostpath0
+      - hostPath:
+          path: /ssd/seaweed-master
+        name: seaweedfs-filer-hostpath1
+status: {}

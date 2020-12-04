@@ -1,0 +1,132 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+    kompose.version: 1.20.0 (f3d54d784)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: nginx
+  name: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: nginx
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+        kompose.version: 1.20.0 (f3d54d784)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/prod: "true"
+        io.kompose.service: nginx
+    spec:
+      containers:
+      - env:
+        - name: CONSUL_AGENT
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_AGENT
+              name: global-env
+        - name: CONSUL_AGENT_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_AGENT_PORT
+              name: global-env
+        - name: CONSUL_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_PORT
+              name: global-env
+        - name: CONSUL_SERVER
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_SERVER
+              name: global-env
+        - name: CRT_CA_BUNDLE
+          valueFrom:
+            configMapKeyRef:
+              key: CRT_CA_BUNDLE
+              name: global-env
+        - name: CRT_PRIVATE_KEY
+          valueFrom:
+            configMapKeyRef:
+              key: CRT_PRIVATE_KEY
+              name: global-env
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              key: MONGO_INITDB_ROOT_PASSWORD
+              name: global-env
+        - name: MONGO_INITDB_ROOT_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              key: MONGO_INITDB_ROOT_USERNAME
+              name: global-env
+        - name: RABBITMQ_DEFAULT_PASS
+          valueFrom:
+            configMapKeyRef:
+              key: RABBITMQ_DEFAULT_PASS
+              name: global-env
+        - name: RABBITMQ_DEFAULT_USER
+          valueFrom:
+            configMapKeyRef:
+              key: RABBITMQ_DEFAULT_USER
+              name: global-env
+        - name: REDIS_DEFAULT_PASS
+          valueFrom:
+            configMapKeyRef:
+              key: REDIS_DEFAULT_PASS
+              name: global-env
+        - name: access_log
+          value: "on"
+        - name: aws_host
+          value: seaweedfs-s3-localnode.default:8333
+        - name: default_dns_resolver
+          value: 127.0.0.11
+        - name: dns_resolver
+          value: 127.0.0.11
+        - name: error_log_level
+          value: info
+        - name: limit_rate_speed
+          value: "0"
+        - name: log_level_containerpilot
+          valueFrom:
+            configMapKeyRef:
+              key: log_level_containerpilot
+              name: global-env
+        - name: rewrite_log
+          value: "on"
+        image: {{ .Values.nginx.image }}
+        name: nginx
+        ports:
+        - containerPort: 1935
+        - containerPort: 443
+        resources: {}
+        volumeMounts:
+        - mountPath: /opt/nginx/html
+          name: nginx-hostpath0
+          readOnly: true
+        - mountPath: /usr/local/share/ca-certificates
+          name: nginx-hostpath1
+        - mountPath: /etc/localtime
+          name: nginx-hostpath2
+          readOnly: true
+      restartPolicy: Always
+      imagePullSecrets:
+      - name: {{ .Chart.Name }}-nvidia-registrykey-secret
+      volumes:
+      - hostPath:
+          path: /storage
+        name: nginx-hostpath0
+      - hostPath:
+          path: /usr/local/share/ca-certificates
+        name: nginx-hostpath1
+      - hostPath:
+          path: /etc/localtime
+        name: nginx-hostpath2
+status: {}

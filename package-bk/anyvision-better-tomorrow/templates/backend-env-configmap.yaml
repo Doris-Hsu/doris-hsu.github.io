@@ -1,0 +1,46 @@
+apiVersion: v1
+data:
+  AGE_EXTRACTION_GPU: "0"
+  ENABLE_BUFFER_CLEANER: "true"
+  ENABLE_COLLATE_SERVICE: "true"
+  ENABLE_CONFD: "true"
+  ENABLE_CONFD_TEAMPLATER: "true"
+  ENABLE_CRON_MASS_IMPORT_REPORTS: "true"
+  ENABLE_CRON_PIPE_IMG_TEMPORARY: "false"
+  ENABLE_DOCKER_LOG: "false"
+  ENABLE_DOCKER_STDOUT: "true"
+  ENABLE_DOCKERIZE: "true"
+  ENABLE_FRAMESTORE_CLEANER: "true"
+  ENABLE_MKDIR: "true"
+  ENABLE_PROCESS_SERVICE: "true"
+  ENABLE_REDIS_SERVICE: "true"
+  ENABLE_REID_SERVICE: "true"
+  ENABLE_TRACK_ARCHIVE_SERVICE: "true"
+  ENABLE_WATCHER: "true"
+  ENABLE_XPRA_SERVICE: "false"
+  FEATURE_EXTRACTION_GPU: "0"
+  GLOG_minloglevel: "2"
+  NVIDIA_DRIVER_CAPABILITIES: all
+  NVIDIA_VISIBLE_DEVICES: all
+  REID_DATA_SERVICE_GPU: "0"
+  REQUESTS_CA_BUNDLE: /usr/local/share/ca-certificates/default/default.full.pem
+  api_service_port: "5443"
+  collate_service_port: "9067"
+  flask_port: "4005"
+  frame_store_udp_port_range: 5000-5250
+  misc_log_level: DEBUG
+  misc_ssl_certificate_path: /usr/local/share/ca-certificates/default/default.full.pem
+  misc_ssl_key_path: /usr/local/share/ca-certificates/default/default.key
+  mongodb_port: "27017"
+  redis_port: "6379"
+  reid_service_port: "9069"
+  track_archive_service_port: "9068"
+  tracking_track_archive_loading_timeout_secs: "86400"
+  tracking_tracking_storage_dir: /root/track_archive_service_data/
+  xvfb_screen_resolution: 1920x1080x24
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: backend-env
+  name: backend-env

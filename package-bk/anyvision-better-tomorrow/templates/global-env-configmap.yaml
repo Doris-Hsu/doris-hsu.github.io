@@ -1,0 +1,20 @@
+apiVersion: v1
+data:
+  CONSUL_AGENT: consul-agent.default
+  CONSUL_AGENT_PORT: "8500"
+  CONSUL_PORT: "8500"
+  CONSUL_SERVER: consul.default
+  CRT_CA_BUNDLE: /usr/local/share/ca-certificates/default/default.full.pem
+  CRT_PRIVATE_KEY: /usr/local/share/ca-certificates/default/default.key
+  MONGO_INITDB_ROOT_PASSWORD: mongopass
+  MONGO_INITDB_ROOT_USERNAME: root
+  RABBITMQ_DEFAULT_PASS: rabbitpass
+  RABBITMQ_DEFAULT_USER: root
+  REDIS_DEFAULT_PASS: redispass
+  log_level_containerpilot: INFO
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: global-env
+  name: global-env

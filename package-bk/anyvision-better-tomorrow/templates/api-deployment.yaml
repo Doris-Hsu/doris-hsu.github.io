@@ -1,0 +1,211 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+    kompose.version: 1.20.0 (f3d54d784)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: api
+  name: api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: api
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+        kompose.version: 1.20.0 (f3d54d784)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/prod: "true"
+        io.kompose.service: api
+    spec:
+      containers:
+      - env:
+        - name: API_IP
+          value: api.default
+        - name: CA_HOST
+          value: apigateway.default
+        - name: CONSUL_AGENT
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_AGENT
+              name: global-env
+        - name: CONSUL_AGENT_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_AGENT_PORT
+              name: global-env
+        - name: CONSUL_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_PORT
+              name: global-env
+        - name: CONSUL_SERVER
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_SERVER
+              name: global-env
+        - name: CRT_CA_BUNDLE
+          valueFrom:
+            configMapKeyRef:
+              key: CRT_CA_BUNDLE
+              name: global-env
+        - name: CRT_PRIVATE_KEY
+          valueFrom:
+            configMapKeyRef:
+              key: CRT_PRIVATE_KEY
+              name: global-env
+        - name: ENABLE_CHOWN
+          value: "false"
+        - name: ENABLE_DOCKER_LOG
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_DOCKER_LOG
+              name: api-env
+        - name: ENABLE_DOCKER_STDOUT
+          valueFrom:
+            configMapKeyRef:
+              key: ENABLE_DOCKER_STDOUT
+              name: api-env
+        - name: FEATURE_TOGGLE_CRON_JOB
+          valueFrom:
+            configMapKeyRef:
+              key: FEATURE_TOGGLE_CRON_JOB
+              name: api-env
+        - name: FEATURE_TOGGLE_MASTER
+          valueFrom:
+            configMapKeyRef:
+              key: FEATURE_TOGGLE_MASTER
+              name: api-env
+        - name: MASS_IMPORT_IP
+          value: reid-localnode.default
+        - name: MASS_IMPORT_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: MASS_IMPORT_PORT
+              name: api-env
+        - name: MONGO_DB_IP
+          value: mongodb.default
+        - name: MONGO_DB_NAME
+          valueFrom:
+            configMapKeyRef:
+              key: MONGO_DB_NAME
+              name: api-env
+        - name: MONGO_DB_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: MONGO_DB_PORT
+              name: api-env
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              key: MONGO_INITDB_ROOT_PASSWORD
+              name: global-env
+        - name: MONGO_INITDB_ROOT_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              key: MONGO_INITDB_ROOT_USERNAME
+              name: global-env
+        - name: NODE_TLS_REJECT_UNAUTHORIZED
+          valueFrom:
+            configMapKeyRef:
+              key: NODE_TLS_REJECT_UNAUTHORIZED
+              name: api-env
+        - name: PORT
+          valueFrom:
+            configMapKeyRef:
+              key: PORT
+              name: api-env
+        - name: RABBITMQ_DEFAULT_PASS
+          valueFrom:
+            configMapKeyRef:
+              key: RABBITMQ_DEFAULT_PASS
+              name: global-env
+        - name: RABBITMQ_DEFAULT_USER
+          valueFrom:
+            configMapKeyRef:
+              key: RABBITMQ_DEFAULT_USER
+              name: global-env
+        - name: REDIS_DEFAULT_PASS
+          valueFrom:
+            configMapKeyRef:
+              key: REDIS_DEFAULT_PASS
+              name: global-env
+        - name: RMQ_API_EXCHANGE_BIND_KEY
+          valueFrom:
+            configMapKeyRef:
+              key: RMQ_API_EXCHANGE_BIND_KEY
+              name: api-env
+        - name: RMQ_API_HOST
+          value: amqp://rabbitmq.default:5672
+        - name: RMQ_API_NAME
+          valueFrom:
+            configMapKeyRef:
+              key: RMQ_API_NAME
+              name: api-env
+        - name: RMQ_API_PASS
+          valueFrom:
+            configMapKeyRef:
+              key: RMQ_API_PASS
+              name: api-env
+        - name: RMQ_API_QUEUE_NAME
+          valueFrom:
+            configMapKeyRef:
+              key: RMQ_API_QUEUE_NAME
+              name: api-env
+        - name: RMQ_API_USER
+          valueFrom:
+            configMapKeyRef:
+              key: RMQ_API_USER
+              name: api-env
+        - name: RUN_AS_USER
+          value: user
+        - name: SECURED_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: SECURED_PORT
+              name: api-env
+        - name: VMS_GATEWAY_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: VMS_GATEWAY_PORT
+              name: api-env
+        - name: log_level_containerpilot
+          valueFrom:
+            configMapKeyRef:
+              key: log_level_containerpilot
+              name: global-env
+        image: {{ .Values.api.image }}
+        name: api
+        ports:
+        - containerPort: 5443
+        - containerPort: 3000
+        resources: {}
+        volumeMounts:
+        - mountPath: /var/www/html
+          name: api-hostpath0
+        - mountPath: /usr/local/share/ca-certificates
+          name: api-hostpath1
+        - mountPath: /etc/localtime
+          name: api-hostpath2
+          readOnly: true
+      restartPolicy: Always
+      imagePullSecrets:
+      - name: {{ .Chart.Name }}-nvidia-registrykey-secret
+      volumes:
+      - hostPath:
+          path: /storage
+        name: api-hostpath0
+      - hostPath:
+          path: /usr/local/share/ca-certificates
+        name: api-hostpath1
+      - hostPath:
+          path: /etc/localtime
+        name: api-hostpath2
+status: {}

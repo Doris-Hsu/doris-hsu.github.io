@@ -1,0 +1,129 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+    kompose.version: 1.20.0 (f3d54d784)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: consul-agent
+  name: consul-agent
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: consul-agent
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+        kompose.version: 1.20.0 (f3d54d784)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/prod: "true"
+        io.kompose.service: consul-agent
+    spec:
+      containers:
+      - env:
+        - name: CMD
+          value: agent -rejoin -retry-join consul.default -retry-max 10 -retry-interval
+            15s -disable-host-node-id
+        - name: CONSUL_AGENT
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_AGENT
+              name: global-env
+        - name: CONSUL_AGENT_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_AGENT_PORT
+              name: global-env
+        - name: CONSUL_BIND_INTERFACE
+          value: eth0
+        - name: CONSUL_CLIENT_ADDRESS
+          value: 0.0.0.0
+        - name: CONSUL_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_PORT
+              name: global-env
+        - name: CONSUL_SERVER
+          valueFrom:
+            configMapKeyRef:
+              key: CONSUL_SERVER
+              name: global-env
+        - name: CRT_CA_BUNDLE
+          valueFrom:
+            configMapKeyRef:
+              key: CRT_CA_BUNDLE
+              name: global-env
+        - name: CRT_PRIVATE_KEY
+          valueFrom:
+            configMapKeyRef:
+              key: CRT_PRIVATE_KEY
+              name: global-env
+        - name: DATACENTER
+          value: dc1
+        - name: JOB_NAME
+          value: consul-agent
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              key: MONGO_INITDB_ROOT_PASSWORD
+              name: global-env
+        - name: MONGO_INITDB_ROOT_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              key: MONGO_INITDB_ROOT_USERNAME
+              name: global-env
+        - name: RABBITMQ_DEFAULT_PASS
+          valueFrom:
+            configMapKeyRef:
+              key: RABBITMQ_DEFAULT_PASS
+              name: global-env
+        - name: RABBITMQ_DEFAULT_USER
+          valueFrom:
+            configMapKeyRef:
+              key: RABBITMQ_DEFAULT_USER
+              name: global-env
+        - name: REDIS_DEFAULT_PASS
+          valueFrom:
+            configMapKeyRef:
+              key: REDIS_DEFAULT_PASS
+              name: global-env
+        - name: RUN_AS_USER
+          value: root
+        - name: SITE_NAME
+          value: local
+        - name: log_level_containerpilot
+          valueFrom:
+            configMapKeyRef:
+              key: log_level_containerpilot
+              name: global-env
+        image: {{ .Values.consul.image }}
+        name: consul-agent
+        ports:
+        - containerPort: 8301
+        - containerPort: 8400
+        - containerPort: 8500
+        - containerPort: 8600
+        resources: {}
+        volumeMounts:
+        - mountPath: /consul/data
+          name: consul-agent-hostpath0
+        - mountPath: /etc/host_hostname
+          name: consul-agent-hostpath1
+          readOnly: true
+      restartPolicy: Always
+      imagePullSecrets:
+      - name: {{ .Chart.Name }}-nvidia-registrykey-secret
+      volumes:
+      - hostPath:
+          path: /ssd/consul_agent_data
+        name: consul-agent-hostpath0
+      - hostPath:
+          path: /etc/hostname
+        name: consul-agent-hostpath1
+status: {}

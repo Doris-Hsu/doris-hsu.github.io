@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+    kompose.version: 1.20.0 (f3d54d784)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: seaweedfs-master
+  name: seaweedfs-master
+spec:
+  ports:
+  - name: "9333"
+    port: 9333
+    targetPort: 9333
+  selector:
+    io.kompose.service: seaweedfs-master
+status:
+  loadBalancer: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+    kompose.version: 1.20.0 (f3d54d784)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: seaweedfs-master
+  name: seaweedfs-master-localnode
+spec:
+  ports:
+  - name: "9333"
+    port: 9333
+    targetPort: 9333
+  selector:
+    io.kompose.service: seaweedfs-master
+status:
+  loadBalancer: {}

@@ -1,0 +1,86 @@
+# Default values for anyvision-better-tomorrow.
+# This is a YAML-formatted file.
+# Declare name/value pairs to be passed into your templates.
+
+init:
+    image: "nvcr.io/isv-anyvision/init:latest"
+
+memsqlSchema:
+    image: "nvcr.io/isv-anyvision/db-migrator:1.23.1"
+
+danteProxy:
+    image: "nvcr.io/isv-anyvision/dante-proxy:19.02"
+
+coturn:
+    image: "nvcr.io/isv-anyvision/coturn:19.05"
+
+api:
+    image: "nvcr.io/isv-anyvision/api:1.23.1.1"
+
+seaweedfs:
+    image: "nvcr.io/isv-anyvision/seaweedfs:19.05"
+
+memsql:
+    image: "nvcr.io/isv-anyvision/memsql:19.05"
+
+broadcaster:
+    image: "nvcr.io/isv-anyvision/broadcaster:1.23.1"
+
+consul:
+    image: "nvcr.io/isv-anyvision/consul:18.12"
+
+certificator:
+    image: "nvcr.io/isv-anyvision/certificator:latest"
+
+rtstreamer:
+    image: "nvcr.io/isv-anyvision/node-rtsp-rtmp-server:19.05"
+
+rabbitmq:
+    image: "nvcr.io/isv-anyvision/rabbitmq:19.05"
+
+redis:
+    image: "nvcr.io/isv-anyvision/redis:19.06"
+
+nginx:
+    image: "nvcr.io/isv-anyvision/nginx:19.07"
+
+webrtcStreamer:
+    image: "nvcr.io/isv-anyvision/webrtc-streamer:1.23.1"
+
+mongodb:
+    image: "nvcr.io/isv-anyvision/mongo:19.06"
+
+consulAgent:
+    image: "nvcr.io/isv-anyvision/consul:18.12"
+
+backend:
+    image: "nvcr.io/isv-anyvision/backend-pyconcrete:1.23.1.9"
+
+apigateway:
+    image: "nvcr.io/isv-anyvision/api-gateway:1.23.1"
+
+cron:
+    image: "nvcr.io/isv-anyvision/supercronic:19.05"
+
+nvidia:
+  version: 1
+  metropolis:
+    nodes:
+    - name: "node1"
+      license: "secret"
+      gpus:
+      - id: 0
+        streams:
+        - url: "rtsp://"
+          res: "1920 x 1080"
+          fps: 30
+          encoding: "H264"
+
+global:
+  nvidia:
+    version: 1
+    docker:
+      registry: "nvcr.io"
+      username: "$oauthtoken"
+      password: "YzZtczM5amdtdDcwNjk0cnA2bGU2bXQ3bnQ6MDhkYWE4YmQtMjEzOC00N2ZlLWEwMjUtOGU4YWM4MDE0NWE5"
+

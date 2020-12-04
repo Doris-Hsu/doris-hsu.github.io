@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+    kompose.version: 1.20.0 (f3d54d784)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: seaweedfs-s3
+  name: seaweedfs-s3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: seaweedfs-s3
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: /home/centos/k3/kompose convert --chart --volumes hostPath
+        kompose.version: 1.20.0 (f3d54d784)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/prod: "true"
+        io.kompose.service: seaweedfs-s3
+    spec:
+      containers:
+      - env:
+        - name: SEAWEEDFS_MODE
+          value: s3
+        - name: SEAWEEDFS_S3
+          value: "1"
+        - name: SEAWEEDFS_S3_CMD
+          value: -port=8333 -filer=seaweedfs-filer:8888
+        - name: SEAWEEDFS_S3_PORT
+          value: "8333"
+        image: {{ .Values.seaweedfs.image }}
+        name: seaweedfs-s3
+        ports:
+        - containerPort: 8333
+        resources: {}
+      restartPolicy: Always
+      imagePullSecrets:
+      - name: {{ .Chart.Name }}-nvidia-registrykey-secret
+status: {}
