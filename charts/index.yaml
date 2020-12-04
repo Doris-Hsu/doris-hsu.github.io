@@ -3,7 +3,7 @@ entries:
   avalanche:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-04T21:01:58.060494565+08:00"
+    created: "2020-12-04T21:02:10.103764558+08:00"
     description: A Helm chart for deloying avalanche prometheus load test to a Kubernetes
       cluster
     digest: 27ecf7e38609888022f590b2d194ac9cc7e8c2b3a43ff48d330b010aa665c40e
@@ -19,7 +19,7 @@ entries:
   digits-test:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-04T21:01:58.06112982+08:00"
+    created: "2020-12-04T21:02:10.104136249+08:00"
     description: A Helm chart for Kubernetes
     digest: 41277545c609e23d4665229e541919e105a5ed9706ffe171bde505e3e2205f4c
     name: digits-test
@@ -29,7 +29,7 @@ entries:
   dryrun-failed:
   - apiVersion: v1
     appVersion: 5.0.0
-    created: "2020-12-04T21:01:58.062324282+08:00"
+    created: "2020-12-04T21:02:10.104844425+08:00"
     description: NVIDIA's Deepstream Helm Chart
     digest: 6f610c17dff0d9daec7d5cbed77896c535e602c08ed3949f708e9b19b30ced4b
     name: dryrun-failed
@@ -39,7 +39,7 @@ entries:
   egxqatest-caffe-pubrepo:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-04T21:01:58.063170364+08:00"
+    created: "2020-12-04T21:02:10.10531799+08:00"
     description: A Helm chart for Kubernetes on egxqatest only
     digest: 765a5a80b31a742ee4b9c67e9c6488ac227679054b8f54f08023cc96285ab89b
     name: egxqatest-caffe-pubrepo
@@ -49,7 +49,7 @@ entries:
   gpu-hog:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-04T21:01:58.063496334+08:00"
+    created: "2020-12-04T21:02:10.105502976+08:00"
     description: A Helm chart to produce non-stopping gpu workload
     digest: 8529801a84f3ef720eccfe1f2e6efae7247aeabd32da4aeb1040d023ce22199b
     name: gpu-hog
@@ -59,7 +59,7 @@ entries:
   local-path-provisioner:
   - apiVersion: v1
     appVersion: v0.0.14
-    created: "2020-12-04T21:01:58.064078642+08:00"
+    created: "2020-12-04T21:02:10.106023624+08:00"
     description: Use HostPath for persistent local storage with Kubernetes
     digest: beb656a82c5d8d3b07020cea30b98bd4bfc152ee76488383353cdd6cc32c4ab1
     home: https://github.com/rancher/local-path-provisioner
@@ -76,7 +76,7 @@ entries:
   myco-hello-1:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2020-12-04T21:01:58.064644414+08:00"
+    created: "2020-12-04T21:02:10.10696586+08:00"
     description: MyCo's Hello World 1 sample Helm Chart
     digest: 586ecf6aea14e96c13cba46ba0c4c00d865c146abe09d0b786977bff79471aec
     name: myco-hello-1
@@ -86,7 +86,7 @@ entries:
   myco-hello-2:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2020-12-04T21:01:58.065292264+08:00"
+    created: "2020-12-04T21:02:10.107844245+08:00"
     description: MyCo's Hello World 2 sample Helm Chart
     digest: 49fa74f99fbb4a8a191b599619067cd98008d441b5f78307a7919823355a4068
     name: myco-hello-2
@@ -96,7 +96,7 @@ entries:
   myco-hello-3:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2020-12-04T21:01:58.066390854+08:00"
+    created: "2020-12-04T21:02:10.108387332+08:00"
     description: MyCo's Hello World 3 sample Helm Chart
     digest: 1ab5a2614fe1c89922e0134c0e2595baa3209aba86db7f9c855e48d7a5c35f24
     name: myco-hello-3
@@ -106,7 +106,7 @@ entries:
   nginx-helm-dependance:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2020-12-04T21:01:58.067193954+08:00"
+    created: "2020-12-04T21:02:10.10881368+08:00"
     dependencies:
     - name: tdcsqa-nginx-doris
       repository: https://leow1986.github.io/charts/
@@ -120,7 +120,7 @@ entries:
   ns3:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2020-12-04T21:01:58.067758858+08:00"
+    created: "2020-12-04T21:02:10.109300331+08:00"
     description: MyCo's Hello World 1 sample Helm Chart
     digest: 79d29d618cbec5c1dfbb91de7fe38557959c56820a49c6796478272ec9179cc6
     name: ns3
@@ -130,11 +130,11 @@ entries:
   public-reg-private-caffe-py2:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-04T21:01:58.06802606+08:00"
+    created: "2020-12-04T21:02:10.10956827+08:00"
     description: caffe in privage org
     digest: e9a7fdfa5eb33e5edb1a2a9b43ae4ea7662ec40cceb21c403e21e598d0f1b5db
     name: public-reg-private-caffe-py2
     urls:
     - https://doris-hsu.github.io/charts/public-reg-private-caffe-py2-0.2.0.tgz
     version: 0.2.0
-generated: "2020-12-04T21:01:58.059265774+08:00"
+generated: "2020-12-04T21:02:10.103021716+08:00"
