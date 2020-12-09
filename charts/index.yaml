@@ -3,7 +3,7 @@ entries:
   avalanche:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-09T13:01:53.819148871+08:00"
+    created: "2020-12-09T14:58:14.503010424+08:00"
     description: A Helm chart for deloying avalanche prometheus load test to a Kubernetes
       cluster
     digest: 27ecf7e38609888022f590b2d194ac9cc7e8c2b3a43ff48d330b010aa665c40e
@@ -16,10 +16,20 @@ entries:
     urls:
     - https://doris-hsu.github.io/charts/avalanche-0.1.0.tgz
     version: 0.1.0
+  caffe-nodeselector:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-12-09T14:58:14.503288431+08:00"
+    description: caffe with nodeSelector hostname
+    digest: f0d95ec3b0c4cb9ff5b0c27da70dd692ab3baf830e149af94933ee617322673f
+    name: caffe-nodeselector
+    urls:
+    - https://doris-hsu.github.io/charts/caffe-nodeselector-0.1.0.tgz
+    version: 0.1.0
   digits-test:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-09T13:01:53.848401419+08:00"
+    created: "2020-12-09T14:58:14.503638365+08:00"
     description: A Helm chart for Kubernetes
     digest: 41277545c609e23d4665229e541919e105a5ed9706ffe171bde505e3e2205f4c
     name: digits-test
@@ -29,7 +39,7 @@ entries:
   dryrun-failed:
   - apiVersion: v1
     appVersion: 5.0.0
-    created: "2020-12-09T13:01:53.92208907+08:00"
+    created: "2020-12-09T14:58:14.504347218+08:00"
     description: NVIDIA's Deepstream Helm Chart
     digest: 6f610c17dff0d9daec7d5cbed77896c535e602c08ed3949f708e9b19b30ced4b
     name: dryrun-failed
@@ -39,7 +49,7 @@ entries:
   egxqatest-caffe-pubrepo:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-09T13:01:53.972218742+08:00"
+    created: "2020-12-09T14:58:14.504935794+08:00"
     description: A Helm chart for Kubernetes on egxqatest only
     digest: 765a5a80b31a742ee4b9c67e9c6488ac227679054b8f54f08023cc96285ab89b
     name: egxqatest-caffe-pubrepo
@@ -49,7 +59,7 @@ entries:
   gpu-hog:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-09T13:01:53.976881862+08:00"
+    created: "2020-12-09T14:58:14.505212602+08:00"
     description: A Helm chart to produce non-stopping gpu workload
     digest: 8529801a84f3ef720eccfe1f2e6efae7247aeabd32da4aeb1040d023ce22199b
     name: gpu-hog
@@ -59,7 +69,7 @@ entries:
   local-path-provisioner:
   - apiVersion: v1
     appVersion: v0.0.14
-    created: "2020-12-09T13:01:54.000820666+08:00"
+    created: "2020-12-09T14:58:14.505984085+08:00"
     description: Use HostPath for persistent local storage with Kubernetes
     digest: beb656a82c5d8d3b07020cea30b98bd4bfc152ee76488383353cdd6cc32c4ab1
     home: https://github.com/rancher/local-path-provisioner
@@ -76,7 +86,7 @@ entries:
   memory-demo:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: "2020-12-09T13:01:54.001571942+08:00"
+    created: "2020-12-09T14:58:14.506282009+08:00"
     description: A Helm chart for memory oomkilled test
     digest: 15fa0fe32973d55acd797442da9ca0be00e5bc6c4dfa300c2d017fdb5098f801
     name: memory-demo
@@ -87,7 +97,7 @@ entries:
   myco-hello-1:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2020-12-09T13:01:54.003441889+08:00"
+    created: "2020-12-09T14:58:14.507463887+08:00"
     description: MyCo's Hello World 1 sample Helm Chart
     digest: 45167bcb9a09c4959515297d12b3a0008182e2316a9f791351f6bdcfcbdb9aa6
     name: myco-hello-1
@@ -97,7 +107,7 @@ entries:
   nginx-helm-dependance:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2020-12-09T13:01:54.014873313+08:00"
+    created: "2020-12-09T14:58:14.50844415+08:00"
     dependencies:
     - name: tdcsqa-nginx-doris
       repository: https://leow1986.github.io/charts/
@@ -108,20 +118,10 @@ entries:
     urls:
     - https://doris-hsu.github.io/charts/nginx-helm-dependance-1.0.0.tgz
     version: 1.0.0
-  nodeselector-check:
-  - apiVersion: v1
-    appVersion: 2.0.0
-    created: "2020-12-09T13:01:54.016402818+08:00"
-    description: MyCo's Hello World 1 sample Helm Chart
-    digest: ecfbd9c1864819f966701ff9f42335a9448ae78a68b98300e8b16a6406d951b2
-    name: nodeselector-check
-    urls:
-    - https://doris-hsu.github.io/charts/nodeselector-check-1.0.0.tgz
-    version: 1.0.0
   ns3:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2020-12-09T13:01:54.019488584+08:00"
+    created: "2020-12-09T14:58:14.50922026+08:00"
     description: MyCo's Hello World 1 sample Helm Chart
     digest: 79d29d618cbec5c1dfbb91de7fe38557959c56820a49c6796478272ec9179cc6
     name: ns3
@@ -131,11 +131,11 @@ entries:
   public-reg-private-caffe-py2:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-09T13:01:54.029352971+08:00"
+    created: "2020-12-09T14:58:14.509617531+08:00"
     description: caffe in privage org
     digest: e9a7fdfa5eb33e5edb1a2a9b43ae4ea7662ec40cceb21c403e21e598d0f1b5db
     name: public-reg-private-caffe-py2
     urls:
     - https://doris-hsu.github.io/charts/public-reg-private-caffe-py2-0.2.0.tgz
     version: 0.2.0
-generated: "2020-12-09T13:01:53.797496794+08:00"
+generated: "2020-12-09T14:58:14.502318764+08:00"
