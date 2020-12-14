@@ -3,7 +3,7 @@ entries:
   avalanche:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-12T01:40:56.809776137+08:00"
+    created: "2020-12-14T10:07:59.329336788+08:00"
     description: A Helm chart for deloying avalanche prometheus load test to a Kubernetes
       cluster
     digest: 27ecf7e38609888022f590b2d194ac9cc7e8c2b3a43ff48d330b010aa665c40e
@@ -19,7 +19,7 @@ entries:
   caffe-nodeselector:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-12T01:40:56.81006094+08:00"
+    created: "2020-12-14T10:07:59.330170534+08:00"
     description: caffe with nodeSelector hostname
     digest: f0d95ec3b0c4cb9ff5b0c27da70dd692ab3baf830e149af94933ee617322673f
     name: caffe-nodeselector
@@ -29,7 +29,7 @@ entries:
   digits-test:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-12T01:40:56.810422587+08:00"
+    created: "2020-12-14T10:07:59.331306+08:00"
     description: A Helm chart for Kubernetes
     digest: 41277545c609e23d4665229e541919e105a5ed9706ffe171bde505e3e2205f4c
     name: digits-test
@@ -39,7 +39,7 @@ entries:
   dryrun-failed:
   - apiVersion: v1
     appVersion: 5.0.0
-    created: "2020-12-12T01:40:56.811128892+08:00"
+    created: "2020-12-14T10:07:59.333441682+08:00"
     description: NVIDIA's Deepstream Helm Chart
     digest: 6f610c17dff0d9daec7d5cbed77896c535e602c08ed3949f708e9b19b30ced4b
     name: dryrun-failed
@@ -49,7 +49,7 @@ entries:
   egxqatest-caffe-pubrepo:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-12T01:40:56.811570733+08:00"
+    created: "2020-12-14T10:07:59.347876417+08:00"
     description: A Helm chart for Kubernetes on egxqatest only
     digest: 765a5a80b31a742ee4b9c67e9c6488ac227679054b8f54f08023cc96285ab89b
     name: egxqatest-caffe-pubrepo
@@ -59,7 +59,7 @@ entries:
   gpu-hog:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-12T01:40:56.811762436+08:00"
+    created: "2020-12-14T10:07:59.348257606+08:00"
     description: A Helm chart to produce non-stopping gpu workload
     digest: 8529801a84f3ef720eccfe1f2e6efae7247aeabd32da4aeb1040d023ce22199b
     name: gpu-hog
@@ -68,8 +68,24 @@ entries:
     version: 0.1.0
   local-path-provisioner:
   - apiVersion: v1
+    appVersion: v0.0.19
+    created: "2020-12-14T10:07:59.353433497+08:00"
+    description: Use HostPath for persistent local storage with Kubernetes
+    digest: f3a26b291522f54460826bba0f6ef96d9252333c0a8851ba4af9e4779d4b3087
+    home: https://github.com/rancher/local-path-provisioner
+    keywords:
+    - storage
+    - hostpath
+    kubeVersion: '>=1.12.0-r0'
+    name: local-path-provisioner
+    sources:
+    - https://github.com/rancher/local-path-provisioner.git
+    urls:
+    - https://doris-hsu.github.io/charts/local-path-provisioner-0.0.19.tgz
+    version: 0.0.19
+  - apiVersion: v1
     appVersion: v0.0.14
-    created: "2020-12-12T01:40:56.812320144+08:00"
+    created: "2020-12-14T10:07:59.349326611+08:00"
     description: Use HostPath for persistent local storage with Kubernetes
     digest: beb656a82c5d8d3b07020cea30b98bd4bfc152ee76488383353cdd6cc32c4ab1
     home: https://github.com/rancher/local-path-provisioner
@@ -83,24 +99,10 @@ entries:
     urls:
     - https://doris-hsu.github.io/charts/local-path-provisioner-0.0.14.tgz
     version: 0.0.14
-  maf-dv-veh-vfalse:
-  - apiVersion: v1
-    appVersion: 1.0.0
-    created: "2020-12-12T01:40:56.813586812+08:00"
-    dependencies:
-    - name: deepvision-vehicle
-      repository: https://helm.ngc.nvidia.com/isv-deepvision
-      version: 1.0.2-1
-    description: Helm Chart for maf-dv-veh-704842
-    digest: d57869615fa4c35cbe20be55a204feb8a2e6e8ac4a6750a8a4b5714c85991c5b
-    name: maf-dv-veh-vfalse
-    urls:
-    - https://doris-hsu.github.io/charts/maf-dv-veh-vfalse-1.0.0.tgz
-    version: 1.0.0
   memory-demo:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: "2020-12-12T01:40:56.813892626+08:00"
+    created: "2020-12-14T10:07:59.353839702+08:00"
     description: A Helm chart for memory oomkilled test
     digest: 15fa0fe32973d55acd797442da9ca0be00e5bc6c4dfa300c2d017fdb5098f801
     name: memory-demo
@@ -111,7 +113,7 @@ entries:
   myco-hello-1:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2020-12-12T01:40:56.814489153+08:00"
+    created: "2020-12-14T10:07:59.355882172+08:00"
     description: MyCo's Hello World 1 sample Helm Chart
     digest: 45167bcb9a09c4959515297d12b3a0008182e2316a9f791351f6bdcfcbdb9aa6
     name: myco-hello-1
@@ -121,7 +123,7 @@ entries:
   nginx-helm-dependance:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2020-12-12T01:40:56.814878373+08:00"
+    created: "2020-12-14T10:07:59.356882871+08:00"
     dependencies:
     - name: tdcsqa-nginx-doris
       repository: https://leow1986.github.io/charts/
@@ -135,7 +137,7 @@ entries:
   ns3:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2020-12-12T01:40:56.815362344+08:00"
+    created: "2020-12-14T10:07:59.3579898+08:00"
     description: MyCo's Hello World 1 sample Helm Chart
     digest: 79d29d618cbec5c1dfbb91de7fe38557959c56820a49c6796478272ec9179cc6
     name: ns3
@@ -145,7 +147,7 @@ entries:
   pause-app-test:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: "2020-12-12T01:40:56.815534259+08:00"
+    created: "2020-12-14T10:07:59.358389079+08:00"
     description: A Helm chart for Pause-App
     digest: ee046e789e80ba6dd21d377861d5760ac290c224fc5d0b3a09a672273b2b80e1
     name: pause-app-test
@@ -156,7 +158,7 @@ entries:
   pod-pending-app:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: "2020-12-12T01:40:56.815710825+08:00"
+    created: "2020-12-14T10:07:59.358770259+08:00"
     description: A Helm chart for pod-pending-App
     digest: 3da0cbb6d0d677ec0fdc6541b00b455f8f7edda98a746b88e65c84443c79f249
     name: pod-pending-app
@@ -167,11 +169,11 @@ entries:
   public-reg-private-caffe-py2:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-12T01:40:56.816009779+08:00"
+    created: "2020-12-14T10:07:59.359373962+08:00"
     description: caffe in privage org
     digest: e9a7fdfa5eb33e5edb1a2a9b43ae4ea7662ec40cceb21c403e21e598d0f1b5db
     name: public-reg-private-caffe-py2
     urls:
     - https://doris-hsu.github.io/charts/public-reg-private-caffe-py2-0.2.0.tgz
     version: 0.2.0
-generated: "2020-12-12T01:40:56.809017866+08:00"
+generated: "2020-12-14T10:07:59.315698087+08:00"
