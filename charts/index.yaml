@@ -3,7 +3,7 @@ entries:
   avalanche:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-15T14:40:08.523789284+08:00"
+    created: "2020-12-15T14:50:23.169466691+08:00"
     description: A Helm chart for deloying avalanche prometheus load test to a Kubernetes
       cluster
     digest: 27ecf7e38609888022f590b2d194ac9cc7e8c2b3a43ff48d330b010aa665c40e
@@ -19,7 +19,7 @@ entries:
   caffe-nodeselector:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-15T14:40:08.524170985+08:00"
+    created: "2020-12-15T14:50:23.16973214+08:00"
     description: caffe with nodeSelector hostname
     digest: f0d95ec3b0c4cb9ff5b0c27da70dd692ab3baf830e149af94933ee617322673f
     name: caffe-nodeselector
@@ -29,7 +29,7 @@ entries:
   digits-test:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-15T14:40:08.524673797+08:00"
+    created: "2020-12-15T14:50:23.170139786+08:00"
     description: A Helm chart for Kubernetes
     digest: 41277545c609e23d4665229e541919e105a5ed9706ffe171bde505e3e2205f4c
     name: digits-test
@@ -39,7 +39,7 @@ entries:
   dryrun-failed:
   - apiVersion: v1
     appVersion: 5.0.0
-    created: "2020-12-15T14:40:08.525684578+08:00"
+    created: "2020-12-15T14:50:23.170894918+08:00"
     description: NVIDIA's Deepstream Helm Chart
     digest: 6f610c17dff0d9daec7d5cbed77896c535e602c08ed3949f708e9b19b30ced4b
     name: dryrun-failed
@@ -49,7 +49,7 @@ entries:
   dv-808962:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2020-12-15T14:40:08.527865012+08:00"
+    created: "2020-12-15T14:50:23.17260986+08:00"
     dependencies:
     - name: deepvision-demographics
       repository: https://helm.ngc.nvidia.com/isv-deepvision
@@ -66,7 +66,7 @@ entries:
   dv-demo-808962:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2020-12-15T14:40:08.529016946+08:00"
+    created: "2020-12-15T14:50:23.184834201+08:00"
     dependencies:
     - name: deepvision-demographics
       repository: https://helm.ngc.nvidia.com/isv-deepvision
@@ -80,7 +80,7 @@ entries:
   dv-reco-479392:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2020-12-15T14:40:08.530777378+08:00"
+    created: "2020-12-15T14:50:23.185760828+08:00"
     dependencies:
     - name: deepvision-recognition
       repository: https://helm.ngc.nvidia.com/isv-deepvision
@@ -94,7 +94,7 @@ entries:
   dv-veh-327799:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2020-12-15T14:40:08.531902655+08:00"
+    created: "2020-12-15T14:50:23.186520897+08:00"
     dependencies:
     - name: deepvision-vehicle
       repository: https://helm.ngc.nvidia.com/isv-deepvision
@@ -108,7 +108,7 @@ entries:
   egxqatest-caffe-pubrepo:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-15T14:40:08.532306387+08:00"
+    created: "2020-12-15T14:50:23.186782549+08:00"
     description: A Helm chart for Kubernetes on egxqatest only
     digest: 765a5a80b31a742ee4b9c67e9c6488ac227679054b8f54f08023cc96285ab89b
     name: egxqatest-caffe-pubrepo
@@ -118,7 +118,7 @@ entries:
   gpu-hog:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-15T14:40:08.532579442+08:00"
+    created: "2020-12-15T14:50:23.186958386+08:00"
     description: A Helm chart to produce non-stopping gpu workload
     digest: 8529801a84f3ef720eccfe1f2e6efae7247aeabd32da4aeb1040d023ce22199b
     name: gpu-hog
@@ -128,7 +128,7 @@ entries:
   local-path-provisioner:
   - apiVersion: v1
     appVersion: v0.0.19
-    created: "2020-12-15T14:40:08.534236846+08:00"
+    created: "2020-12-15T14:50:23.188031944+08:00"
     description: Use HostPath for persistent local storage with Kubernetes
     digest: f3a26b291522f54460826bba0f6ef96d9252333c0a8851ba4af9e4779d4b3087
     home: https://github.com/rancher/local-path-provisioner
@@ -144,7 +144,7 @@ entries:
     version: 0.0.19
   - apiVersion: v1
     appVersion: v0.0.14
-    created: "2020-12-15T14:40:08.533346327+08:00"
+    created: "2020-12-15T14:50:23.187444865+08:00"
     description: Use HostPath for persistent local storage with Kubernetes
     digest: beb656a82c5d8d3b07020cea30b98bd4bfc152ee76488383353cdd6cc32c4ab1
     home: https://github.com/rancher/local-path-provisioner
@@ -161,7 +161,7 @@ entries:
   memory-demo:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: "2020-12-15T14:40:08.534557296+08:00"
+    created: "2020-12-15T14:50:23.188253673+08:00"
     description: A Helm chart for memory oomkilled test
     digest: 15fa0fe32973d55acd797442da9ca0be00e5bc6c4dfa300c2d017fdb5098f801
     name: memory-demo
@@ -172,7 +172,7 @@ entries:
   myco-hello-1:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2020-12-15T14:40:08.535298463+08:00"
+    created: "2020-12-15T14:50:23.188749008+08:00"
     description: MyCo's Hello World 1 sample Helm Chart
     digest: 45167bcb9a09c4959515297d12b3a0008182e2316a9f791351f6bdcfcbdb9aa6
     name: myco-hello-1
@@ -182,7 +182,7 @@ entries:
   nginx-helm-dependance:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2020-12-15T14:40:08.535877215+08:00"
+    created: "2020-12-15T14:50:23.189135055+08:00"
     dependencies:
     - name: tdcsqa-nginx-doris
       repository: https://leow1986.github.io/charts/
@@ -196,7 +196,7 @@ entries:
   ns3:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2020-12-15T14:40:08.536658427+08:00"
+    created: "2020-12-15T14:50:23.189700784+08:00"
     description: MyCo's Hello World 1 sample Helm Chart
     digest: 79d29d618cbec5c1dfbb91de7fe38557959c56820a49c6796478272ec9179cc6
     name: ns3
@@ -206,7 +206,7 @@ entries:
   ntech-374567:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2020-12-15T14:40:08.543174767+08:00"
+    created: "2020-12-15T14:50:23.195061374+08:00"
     dependencies:
     - name: ntech-ffpubsafety
       repository: https://helm.ngc.nvidia.com/isv-ntech
@@ -220,7 +220,7 @@ entries:
   nv-825476:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2020-12-15T14:40:08.544292076+08:00"
+    created: "2020-12-15T14:50:23.196346133+08:00"
     dependencies:
     - name: nvidia-deepstream-public
       repository: https://helm.ngc.nvidia.com/isv-nvidia-metropolis
@@ -234,7 +234,7 @@ entries:
   pause-app-test:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: "2020-12-15T14:40:08.544461953+08:00"
+    created: "2020-12-15T14:50:23.196543154+08:00"
     description: A Helm chart for Pause-App
     digest: ee046e789e80ba6dd21d377861d5760ac290c224fc5d0b3a09a672273b2b80e1
     name: pause-app-test
@@ -245,7 +245,7 @@ entries:
   pod-pending-app:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: "2020-12-15T14:40:08.544630708+08:00"
+    created: "2020-12-15T14:50:23.19674383+08:00"
     description: A Helm chart for pod-pending-App
     digest: 3da0cbb6d0d677ec0fdc6541b00b455f8f7edda98a746b88e65c84443c79f249
     name: pod-pending-app
@@ -256,11 +256,11 @@ entries:
   public-reg-private-caffe-py2:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-12-15T14:40:08.544886019+08:00"
+    created: "2020-12-15T14:50:23.197047691+08:00"
     description: caffe in privage org
     digest: e9a7fdfa5eb33e5edb1a2a9b43ae4ea7662ec40cceb21c403e21e598d0f1b5db
     name: public-reg-private-caffe-py2
     urls:
     - https://doris-hsu.github.io/charts/public-reg-private-caffe-py2-0.2.0.tgz
     version: 0.2.0
-generated: "2020-12-15T14:40:08.522775632+08:00"
+generated: "2020-12-15T14:50:23.168700533+08:00"
