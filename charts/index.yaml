@@ -1,23 +1,9 @@
 apiVersion: v1
 entries:
-  ainvr-998159:
-  - apiVersion: v1
-    appVersion: 1.0.0
-    created: "2021-01-28T09:47:55.14124151+08:00"
-    dependencies:
-    - name: ironyun-ainvr
-      repository: https://helm.ngc.nvidia.com/isv-ironyun
-      version: 4.0.0-1
-    description: Helm Chart for ainvr-998159
-    digest: 4e3c3e150d7df3ab5cb5e9775d6c24b3997f59629c69ccf9cd58241c2a5c9088
-    name: ainvr-998159
-    urls:
-    - https://doris-hsu.github.io/charts/ainvr-998159-1.0.0.tgz
-    version: 1.0.0
   app2-helm-dependance:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2021-01-28T09:47:55.142628167+08:00"
+    created: "2021-02-25T17:34:47.292133451+08:00"
     dependencies:
     - name: tdcsqa-nginx-doris
       repository: https://leow1986.github.io/charts/
@@ -34,7 +20,7 @@ entries:
   avalanche:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-01-28T09:47:55.144053795+08:00"
+    created: "2021-02-25T17:34:47.360043738+08:00"
     description: A Helm chart for deloying avalanche prometheus load test to a Kubernetes
       cluster
     digest: 27ecf7e38609888022f590b2d194ac9cc7e8c2b3a43ff48d330b010aa665c40e
@@ -50,7 +36,7 @@ entries:
   caffe-nodeselector:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-01-28T09:47:55.144721791+08:00"
+    created: "2021-02-25T17:34:47.372917165+08:00"
     description: caffe with nodeSelector hostname
     digest: a6347f2a14f8f0c564070e8796ee68cf8538cc562c0724b275218d4f9c0b116e
     name: caffe-nodeselector
@@ -60,7 +46,7 @@ entries:
   digits-test:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-01-28T09:47:55.145082978+08:00"
+    created: "2021-02-25T17:34:47.382595689+08:00"
     description: A Helm chart for Kubernetes
     digest: 41277545c609e23d4665229e541919e105a5ed9706ffe171bde505e3e2205f4c
     name: digits-test
@@ -70,59 +56,17 @@ entries:
   dryrun-failed:
   - apiVersion: v1
     appVersion: 5.0.0
-    created: "2021-01-28T09:47:55.145792283+08:00"
+    created: "2021-02-25T17:34:47.393891638+08:00"
     description: NVIDIA's Deepstream Helm Chart
     digest: 6f610c17dff0d9daec7d5cbed77896c535e602c08ed3949f708e9b19b30ced4b
     name: dryrun-failed
     urls:
     - https://doris-hsu.github.io/charts/dryrun-failed-5.0.1.tgz
     version: 5.0.1
-  dv-demo-808962:
-  - apiVersion: v1
-    appVersion: 1.0.0
-    created: "2021-01-28T09:47:55.147387875+08:00"
-    dependencies:
-    - name: deepvision-demographics
-      repository: https://helm.ngc.nvidia.com/isv-deepvision
-      version: 1.0.2-1
-    description: Helm Chart for dv-demo-808962
-    digest: fae1540475280f43ddbd8d8299b2b68b9718c4cf3c5745841365d21a6390aa05
-    name: dv-demo-808962
-    urls:
-    - https://doris-hsu.github.io/charts/dv-demo-808962-1.0.0.tgz
-    version: 1.0.0
-  dv-reco-479392:
-  - apiVersion: v1
-    appVersion: 1.0.0
-    created: "2021-01-28T09:47:55.14821744+08:00"
-    dependencies:
-    - name: deepvision-recognition
-      repository: https://helm.ngc.nvidia.com/isv-deepvision
-      version: 1.0.2-1
-    description: Helm Chart for dv-reco-479392
-    digest: 0d84c59085af2c7a52eba1d0cc6b2699ad245d174accae3ca6bcbe19902ed2d3
-    name: dv-reco-479392
-    urls:
-    - https://doris-hsu.github.io/charts/dv-reco-479392-1.0.0.tgz
-    version: 1.0.0
-  dv-veh-327799:
-  - apiVersion: v1
-    appVersion: 1.0.0
-    created: "2021-01-28T09:47:55.148992386+08:00"
-    dependencies:
-    - name: deepvision-vehicle
-      repository: https://helm.ngc.nvidia.com/isv-deepvision
-      version: 1.0.2-1
-    description: Helm Chart for dv-veh-327799
-    digest: 2452214ec9af5d39251749641aa1d5496762f669dc79c0ee20084dc68a0485ac
-    name: dv-veh-327799
-    urls:
-    - https://doris-hsu.github.io/charts/dv-veh-327799-1.0.0.tgz
-    version: 1.0.0
   egxqatest-caffe-pubrepo:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-01-28T09:47:55.149257013+08:00"
+    created: "2021-02-25T17:34:47.406359522+08:00"
     description: A Helm chart for Kubernetes on egxqatest only
     digest: 765a5a80b31a742ee4b9c67e9c6488ac227679054b8f54f08023cc96285ab89b
     name: egxqatest-caffe-pubrepo
@@ -132,7 +76,7 @@ entries:
   egxqatest-nginx:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-01-28T09:47:55.149441504+08:00"
+    created: "2021-02-25T17:34:47.42098422+08:00"
     description: A Helm chart for Kubernetes
     digest: 99e1f85f0ce62f8fce6a4ec0a74159195e82d218d26e61218d30edbc24606756
     name: egxqatest-nginx
@@ -142,17 +86,28 @@ entries:
   gpu-hog:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-01-28T09:47:55.149628945+08:00"
+    created: "2021-02-25T17:34:47.422911583+08:00"
     description: A Helm chart to produce non-stopping gpu workload
     digest: 8529801a84f3ef720eccfe1f2e6efae7247aeabd32da4aeb1040d023ce22199b
     name: gpu-hog
     urls:
     - https://doris-hsu.github.io/charts/gpu-hog-0.1.0.tgz
     version: 0.1.0
+  liveness:
+  - apiVersion: v1
+    appVersion: 0.1.0
+    created: "2021-02-25T17:34:47.423346093+08:00"
+    description: A Helm chart for liveness test
+    digest: fb959fcb906c44fc4980fafe826e238f77257ef25bc528540156ae613cfe774e
+    name: liveness
+    type: application
+    urls:
+    - https://doris-hsu.github.io/charts/liveness-0.1.0.tgz
+    version: 0.1.0
   local-path-provisioner:
   - apiVersion: v1
     appVersion: v0.0.19
-    created: "2021-01-28T09:47:55.150682493+08:00"
+    created: "2021-02-25T17:34:47.467466675+08:00"
     description: Use HostPath for persistent local storage with Kubernetes
     digest: f3a26b291522f54460826bba0f6ef96d9252333c0a8851ba4af9e4779d4b3087
     home: https://github.com/rancher/local-path-provisioner
@@ -168,7 +123,7 @@ entries:
     version: 0.0.19
   - apiVersion: v1
     appVersion: v0.0.14
-    created: "2021-01-28T09:47:55.15011651+08:00"
+    created: "2021-02-25T17:34:47.450589714+08:00"
     description: Use HostPath for persistent local storage with Kubernetes
     digest: beb656a82c5d8d3b07020cea30b98bd4bfc152ee76488383353cdd6cc32c4ab1
     home: https://github.com/rancher/local-path-provisioner
@@ -185,7 +140,7 @@ entries:
   memory-demo:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: "2021-01-28T09:47:55.150879843+08:00"
+    created: "2021-02-25T17:34:47.468005333+08:00"
     description: A Helm chart for memory oomkilled test
     digest: 15fa0fe32973d55acd797442da9ca0be00e5bc6c4dfa300c2d017fdb5098f801
     name: memory-demo
@@ -196,7 +151,7 @@ entries:
   myco-hello-1:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2021-01-28T09:47:55.151413921+08:00"
+    created: "2021-02-25T17:34:47.473888713+08:00"
     description: MyCo's Hello World 1 sample Helm Chart
     digest: 45167bcb9a09c4959515297d12b3a0008182e2316a9f791351f6bdcfcbdb9aa6
     name: myco-hello-1
@@ -206,7 +161,7 @@ entries:
   nginx-helm-dependance:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2021-01-28T09:47:55.151780892+08:00"
+    created: "2021-02-25T17:34:47.483071918+08:00"
     dependencies:
     - name: tdcsqa-nginx-doris
       repository: https://leow1986.github.io/charts/
@@ -220,7 +175,7 @@ entries:
   ns-dependency3:
   - apiVersion: v1
     appVersion: 1.0.1
-    created: "2021-01-28T09:47:55.153422455+08:00"
+    created: "2021-02-25T17:34:47.488802419+08:00"
     dependencies:
     - name: ns1
       repository: file://../ns1
@@ -240,45 +195,17 @@ entries:
   ns3:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2021-01-28T09:47:55.154188068+08:00"
+    created: "2021-02-25T17:34:47.498625833+08:00"
     description: MyCo's Hello World 1 sample Helm Chart
     digest: 79d29d618cbec5c1dfbb91de7fe38557959c56820a49c6796478272ec9179cc6
     name: ns3
     urls:
     - https://doris-hsu.github.io/charts/ns3-2.0.1.tgz
     version: 2.0.1
-  ntech-374567:
-  - apiVersion: v1
-    appVersion: 1.0.0
-    created: "2021-01-28T09:47:55.160030303+08:00"
-    dependencies:
-    - name: ntech-ffpubsafety
-      repository: https://helm.ngc.nvidia.com/isv-ntech
-      version: 1.0.0-1
-    description: Helm Chart for ntech-374567
-    digest: 607726d847276815e00a180bbb03e69b13ace3f3e5eaa87c8be3feb82244c157
-    name: ntech-374567
-    urls:
-    - https://doris-hsu.github.io/charts/ntech-374567-1.0.0.tgz
-    version: 1.0.0
-  nv-824759:
-  - apiVersion: v1
-    appVersion: 1.0.0
-    created: "2021-01-28T09:47:55.161366011+08:00"
-    dependencies:
-    - name: nvidia-deepstream-public
-      repository: https://helm.ngc.nvidia.com/isv-nvidia-metropolis
-      version: 5.0.0
-    description: Helm Chart for nv-824759
-    digest: db037c89b5924e0578038e045534bb08ed6f1516a610dc920ce889174b09782c
-    name: nv-824759
-    urls:
-    - https://doris-hsu.github.io/charts/nv-824759-1.0.0.tgz
-    version: 1.0.0
   pause-app-test:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: "2021-01-28T09:47:55.161533461+08:00"
+    created: "2021-02-25T17:34:47.527190239+08:00"
     description: A Helm chart for Pause-App
     digest: ee046e789e80ba6dd21d377861d5760ac290c224fc5d0b3a09a672273b2b80e1
     name: pause-app-test
@@ -289,7 +216,7 @@ entries:
   privileged-true:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2021-01-28T09:47:55.162009194+08:00"
+    created: "2021-02-25T17:34:47.528558687+08:00"
     description: privileged-true sample Helm Chart
     digest: fcc2830ab271efce11c5ca74360cf1622c72df658ad128fb32ba64d0d64b58b3
     name: privileged-true
@@ -299,97 +226,17 @@ entries:
   public-reg-private-caffe-py2:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-01-28T09:47:55.162270055+08:00"
+    created: "2021-02-25T17:34:47.542443107+08:00"
     description: caffe in privage org
     digest: e9a7fdfa5eb33e5edb1a2a9b43ae4ea7662ec40cceb21c403e21e598d0f1b5db
     name: public-reg-private-caffe-py2
     urls:
     - https://doris-hsu.github.io/charts/public-reg-private-caffe-py2-0.2.0.tgz
     version: 0.2.0
-  realnetworks-safr-default:
-  - apiVersion: v1
-    appVersion: 3.2.0
-    created: "2021-01-28T09:47:55.163365567+08:00"
-    description: Helm Chart for Realnetworks SAFR
-    digest: 68e9fc091959050dce3c86e129fb0a68cd70336a09b844db2d43fa5bd415344a
-    keywords:
-    - realnetworks
-    - safr
-    name: realnetworks-safr-default
-    urls:
-    - https://doris-hsu.github.io/charts/realnetworks-safr-default-3.2.0-1.tgz
-    version: 3.2.0-1
-  realnetworks-safr-job:
-  - apiVersion: v1
-    appVersion: 3.2.0
-    created: "2021-01-28T09:47:55.164016141+08:00"
-    description: Helm Chart for Realnetworks SAFR
-    digest: 36367c3d036505001e5f7a6a081e5fe951704bd0916e9a5f9e87f9d8fede7b84
-    keywords:
-    - realnetworks
-    - safr
-    name: realnetworks-safr-job
-    urls:
-    - https://doris-hsu.github.io/charts/realnetworks-safr-job-3.2.0-1.tgz
-    version: 3.2.0-1
-  realnetworks-safr-job2:
-  - apiVersion: v1
-    appVersion: 2.0.0
-    created: "2021-01-28T09:47:55.165095626+08:00"
-    description: Helm Chart for Realnetworks SAFR
-    digest: c2212b8dec238d93c58d1764526cffa3e9d5dc6808816d67522b600b2d6ce11a
-    keywords:
-    - realnetworks
-    - safr
-    name: realnetworks-safr-job2
-    urls:
-    - https://doris-hsu.github.io/charts/realnetworks-safr-job2-3.2.0-1.tgz
-    version: 3.2.0-1
-  realnetworks-safr-ns:
-  - apiVersion: v1
-    appVersion: 3.2.0
-    created: "2021-01-28T09:47:55.166364992+08:00"
-    description: Helm Chart for Realnetworks SAFR
-    digest: 3d616ef1e3c2339871e15c308a2f1c919088167de64345b4d2d5f33c57dd9295
-    keywords:
-    - realnetworks
-    - safr
-    name: realnetworks-safr-ns
-    urls:
-    - https://doris-hsu.github.io/charts/realnetworks-safr-ns-3.2.0-1.tgz
-    version: 3.2.0-1
-  safr-3-default:
-  - apiVersion: v1
-    appVersion: 1.0.0
-    created: "2021-01-28T09:47:55.168775667+08:00"
-    dependencies:
-    - name: realnetworks-safr
-      repository: https://helm.ngc.nvidia.com/isv-realnetworks
-      version: 3.2.0-1
-    description: Helm Chart for safr-3
-    digest: c0607dc34f7d6c88e46a6b96985d298e70d2a3a9089999a4c6875986ad88b496
-    name: safr-3-default
-    urls:
-    - https://doris-hsu.github.io/charts/safr-3-default-1.0.0.tgz
-    version: 1.0.0
-  safr-3-ns:
-  - apiVersion: v1
-    appVersion: 1.0.0
-    created: "2021-01-28T09:47:55.170281598+08:00"
-    dependencies:
-    - name: realnetworks-safr
-      repository: https://helm.ngc.nvidia.com/isv-realnetworks
-      version: 3.2.0-1
-    description: Helm Chart for safr-3
-    digest: ac2e9a78dad01e86de675e76ac8378ad5fb26c24854d2dc454d0b71cf06a351e
-    name: safr-3-ns
-    urls:
-    - https://doris-hsu.github.io/charts/safr-3-ns-1.0.0.tgz
-    version: 1.0.0
   safr-15:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2021-01-28T09:47:55.167261685+08:00"
+    created: "2021-02-25T17:34:47.555630665+08:00"
     dependencies:
     - name: realnetworks-safr
       repository: https://helm.ngc.nvidia.com/isv-realnetworks
@@ -400,60 +247,4 @@ entries:
     urls:
     - https://doris-hsu.github.io/charts/safr-15-1.0.0.tgz
     version: 1.0.0
-  safr-563198:
-  - apiVersion: v1
-    appVersion: 1.0.0
-    created: "2021-01-28T09:47:55.17121876+08:00"
-    dependencies:
-    - name: realnetworks-safr
-      repository: https://helm.ngc.nvidia.com/isv-realnetworks
-      version: 2.0.017-1
-    description: Helm Chart for safr-563198
-    digest: 77dfcd22a087e48bc368229ec703ae753d0b0436fed262ca4c13962c21a8f30c
-    name: safr-563198
-    urls:
-    - https://doris-hsu.github.io/charts/safr-563198-1.0.0.tgz
-    version: 1.0.0
-  vx-civix-665415:
-  - apiVersion: v1
-    appVersion: 1.0.0
-    created: "2021-01-28T09:47:55.172038861+08:00"
-    dependencies:
-    - name: civix
-      repository: https://helm.ngc.nvidia.com/isv-vedax
-      version: 0.1.4-1
-    description: Helm Chart for vx-civix-665415
-    digest: 8f0e1f9ae6c25c6bdc0aeb126f7e5e89fabf7270c08890d6e9fea08ab7cf32dd
-    name: vx-civix-665415
-    urls:
-    - https://doris-hsu.github.io/charts/vx-civix-665415-1.0.0.tgz
-    version: 1.0.0
-  vx-tran-880509:
-  - apiVersion: v1
-    appVersion: 1.0.0
-    created: "2021-01-28T09:47:55.173546336+08:00"
-    dependencies:
-    - name: transpox
-      repository: https://helm.ngc.nvidia.com/isv-vedax
-      version: 0.1.4-1
-    description: Helm Chart for vx-tran-880509
-    digest: d9891396e617a81d0419cedbdd071cf76511f4b8cbd7096cc08f165361acedad
-    name: vx-tran-880509
-    urls:
-    - https://doris-hsu.github.io/charts/vx-tran-880509-1.0.0.tgz
-    version: 1.0.0
-  wesmart-567400:
-  - apiVersion: v1
-    appVersion: 1.0.0
-    created: "2021-01-28T09:47:55.174378671+08:00"
-    dependencies:
-    - name: wesmart-wesafe
-      repository: https://helm.ngc.nvidia.com/isv-wesmart
-      version: 0.1.2
-    description: Helm Chart for wesmart-567400
-    digest: d614c14c082d53636799dd619d3e859e630835b2631613d82ffebfee9a5972eb
-    name: wesmart-567400
-    urls:
-    - https://doris-hsu.github.io/charts/wesmart-567400-1.0.0.tgz
-    version: 1.0.0
-generated: "2021-01-28T09:47:55.138721513+08:00"
+generated: "2021-02-25T17:34:47.265740625+08:00"
