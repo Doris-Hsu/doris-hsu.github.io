@@ -1,0 +1,137 @@
+apiVersion: v1
+entries:
+  analytics-stream:
+  - apiVersion: v1
+    appVersion: v0.2
+    created: "2021-10-12T10:21:47.197862918+08:00"
+    description: A Helm chart for Kubernetes
+    digest: d803a19de8c7a2e66e0a58cc126b9c956724401f669169a1a4f97ca0922f7428
+    name: analytics-stream
+    urls:
+    - https://doris-hsu.github.io/mdx/analytics-stream-0.2.0.tgz
+    version: 0.2.0
+  behavior-learning:
+  - apiVersion: v1
+    appVersion: 1.16.0
+    created: "2021-10-12T10:21:47.198367975+08:00"
+    description: A Helm chart for Kubernetes
+    digest: 03142cb90ea350388364fc0c21a8c1e4e0731c9c78bd6c72064e37fcce326579
+    name: behavior-learning
+    type: application
+    urls:
+    - https://doris-hsu.github.io/mdx/behavior-learning-0.2.0.tgz
+    version: 0.2.0
+  elasticsearch-curator:
+  - apiVersion: v1
+    appVersion: 5.7.6
+    created: "2021-10-12T10:21:47.199484096+08:00"
+    dependencies:
+    - name: elasticsearch-curator
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: 2.1.3
+    description: A Helm chart for Kubernetes
+    digest: 7d9f7d9c29fbdbb5afe9a6a8bf806b6b7ee1a39b9f143e9b5577461133872d23
+    name: elasticsearch-curator
+    urls:
+    - https://doris-hsu.github.io/mdx/elasticsearch-curator-0.2.0.tgz
+    version: 0.2.0
+  elasticsearch-kibana:
+  - apiVersion: v1
+    appVersion: 7.10.1
+    created: "2021-10-12T10:21:47.204208705+08:00"
+    dependencies:
+    - name: elasticsearch
+      repository: https://helm.elastic.co
+      version: 7.10.1
+    - name: kibana
+      repository: https://helm.elastic.co
+      version: 7.10.1
+    description: A Helm chart for Kubernetes
+    digest: 3f204330bdcbc2c20136658b19e148799ed067da71addcf0d721b5efcaba814c
+    name: elasticsearch-kibana
+    urls:
+    - https://doris-hsu.github.io/mdx/elasticsearch-kibana-0.2.0.tgz
+    version: 0.2.0
+  kafka:
+  - apiVersion: v1
+    appVersion: 2.6.0
+    created: "2021-10-12T10:21:47.204761156+08:00"
+    description: A Helm chart for MDX Strimzi kafka cluster
+    digest: 710695f0e358af4c405ea87c32566fde9f6694ee173b5b2d057449f060a83eb9
+    name: kafka
+    urls:
+    - https://doris-hsu.github.io/mdx/kafka-0.2.0.tgz
+    version: 0.2.0
+  nginx-ingres-controller:
+  - apiVersion: v1
+    appVersion: 0.26.1
+    created: "2021-10-12T10:21:47.207318706+08:00"
+    dependencies:
+    - name: nginx-ingress
+      repository: https://kubernetes-charts.storage.googleapis.com
+      version: v1.26.1
+    description: A Helm chart for Kubernetes
+    digest: cc7b17240a8def890be106c413244e14e1b1a5b99fb91ed8e3b018ab2017ed31
+    name: nginx-ingres-controller
+    urls:
+    - https://doris-hsu.github.io/mdx/nginx-ingres-controller-0.2.0.tgz
+    version: 0.2.0
+  spark-operator:
+  - apiVersion: v1
+    appVersion: v1beta2-1.0.1-2.4.4
+    created: "2021-10-12T10:21:47.208821199+08:00"
+    dependencies:
+    - name: sparkoperator
+      repository: https://kubernetes-charts-incubator.storage.googleapis.com
+      version: 0.7.1
+    description: A Helm chart for Kubernetes
+    digest: 0a07c4a2dc9342ac3ad4899d95bf42166ef2b579f87c991e9bdded60d2239e64
+    name: spark-operator
+    urls:
+    - https://doris-hsu.github.io/mdx/spark-operator-0.2.0.tgz
+    version: 0.2.0
+  strimzi-kafka-operator:
+  - apiVersion: v1
+    appVersion: 0.20.0
+    created: "2021-10-12T10:21:47.213746276+08:00"
+    dependencies:
+    - name: strimzi-kafka-operator
+      repository: https://strimzi.io/downloads/
+      version: 0.20.0
+    description: A Helm chart for mdx Strimzi kafka cluster
+    digest: 2cdc77b96fb6e7ae0c8750f44add95793d64a606662293a28aa94ff341a87428
+    name: strimzi-kafka-operator
+    urls:
+    - https://doris-hsu.github.io/mdx/strimzi-kafka-operator-0.2.0.tgz
+    version: 0.2.0
+  triton-inference-server:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-10-12T10:21:47.214400653+08:00"
+    description: Triton Inference Server Helm Chart
+    digest: fe2e4628baceae775f1bf4f4417ff7622d9dfa4f91a8187a52c7c5b5c08140c7
+    name: triton-inference-server
+    urls:
+    - https://doris-hsu.github.io/mdx/triton-inference-server-0.2.0.tgz
+    version: 0.2.0
+  ui:
+  - apiVersion: v1
+    appVersion: v0.2
+    created: "2021-10-12T10:21:47.215122426+08:00"
+    description: A Helm chart for Kubernetes
+    digest: 9ac5431b0ee27b8ce2ea20e2a6c73ab68f348c5732b6046cb0d96be8003d9ad8
+    name: ui
+    urls:
+    - https://doris-hsu.github.io/mdx/ui-0.2.0.tgz
+    version: 0.2.0
+  web-api:
+  - apiVersion: v1
+    appVersion: v0.2
+    created: "2021-10-12T10:21:47.215815962+08:00"
+    description: A Helm chart for Kubernetes
+    digest: 18e0fc18ed6b1de44b8f6985e95a047be32a6c0668d8fad5ee506f3c5fabd9eb
+    name: web-api
+    urls:
+    - https://doris-hsu.github.io/mdx/web-api-0.2.0.tgz
+    version: 0.2.0
+generated: "2021-10-12T10:21:47.197084297+08:00"
