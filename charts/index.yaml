@@ -3,17 +3,17 @@ entries:
   analytics-stream:
   - apiVersion: v1
     appVersion: v0.2
-    created: "2022-02-18T16:57:29.1736785+08:00"
+    created: "2022-02-18T17:17:53.7644193+08:00"
     description: A Helm chart for Kubernetes
     digest: d803a19de8c7a2e66e0a58cc126b9c956724401f669169a1a4f97ca0922f7428
     name: analytics-stream
     urls:
-    - https://doris-hsu.github.io/charts/analytics-stream-0.2.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/analytics-stream-0.2.0.tgz"
     version: 0.2.0
   app2-helm-dependance:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2022-02-18T16:57:29.1786685+08:00"
+    created: "2022-02-18T17:17:53.7748836+08:00"
     dependencies:
     - name: tdcsqa-nginx-doris
       repository: https://leow1986.github.io/charts/
@@ -25,12 +25,12 @@ entries:
     digest: 8a6d96e8dc7533298011cce8d77becc47be9620f947a48c615cd8390941a35f3
     name: app2-helm-dependance
     urls:
-    - https://doris-hsu.github.io/charts/app2-helm-dependance-1.0.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/app2-helm-dependance-1.0.0.tgz"
     version: 1.0.0
   avalanche:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-02-18T16:57:29.183996+08:00"
+    created: "2022-02-18T17:17:53.7848449+08:00"
     description: A Helm chart for deloying avalanche prometheus load test to a Kubernetes cluster
     digest: 27ecf7e38609888022f590b2d194ac9cc7e8c2b3a43ff48d330b010aa665c40e
     home: https://github.com/open-fresh/avalanche
@@ -40,43 +40,43 @@ entries:
     - name: Bharti Agrawal
     name: avalanche
     urls:
-    - https://doris-hsu.github.io/charts/avalanche-0.1.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/avalanche-0.1.0.tgz"
     version: 0.1.0
   behavior-learning:
   - apiVersion: v1
     appVersion: 1.16.0
-    created: "2022-02-18T16:57:29.1885442+08:00"
+    created: "2022-02-18T17:17:53.7947368+08:00"
     description: A Helm chart for Kubernetes
     digest: 03142cb90ea350388364fc0c21a8c1e4e0731c9c78bd6c72064e37fcce326579
     name: behavior-learning
     type: application
     urls:
-    - https://doris-hsu.github.io/charts/behavior-learning-0.2.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/behavior-learning-0.2.0.tgz"
     version: 0.2.0
   caffe-nodeselector:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-02-18T16:57:29.1933985+08:00"
+    created: "2022-02-18T17:17:53.8055276+08:00"
     description: caffe with nodeSelector hostname
     digest: a6347f2a14f8f0c564070e8796ee68cf8538cc562c0724b275218d4f9c0b116e
     name: caffe-nodeselector
     urls:
-    - https://doris-hsu.github.io/charts/caffe-nodeselector-0.0.1.tgz
+    - "https:/doris-hsu.github.io/charts/\r/caffe-nodeselector-0.0.1.tgz"
     version: 0.0.1
   cal-locked-pytorch:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-02-18T16:57:29.198133+08:00"
+    created: "2022-02-18T17:17:53.8134985+08:00"
     description: A Helm chart to produce non-stopping gpu workload
     digest: 0d4f01e4a65614d6c4c4e0bb6e8e3be2cdf894816059a0bdf4dd75262b2cd792
     name: cal-locked-pytorch
     urls:
-    - https://doris-hsu.github.io/charts/cal-locked-pytorch-0.1.3.tgz
+    - "https:/doris-hsu.github.io/charts/\r/cal-locked-pytorch-0.1.3.tgz"
     version: 0.1.3
   deprepo:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2022-02-18T16:57:29.2034843+08:00"
+    created: "2022-02-18T17:17:53.8235911+08:00"
     dependencies:
     - name: egxqatest-centos
       repository: https://stg.helm.ngc.nvidia.com/egxqatest
@@ -85,125 +85,125 @@ entries:
     digest: 1408c227ed8cf12931228b937976fada5689145208c76e85e7a6cc7cbdc8ffbf
     name: deprepo
     urls:
-    - https://doris-hsu.github.io/charts/deprepo-1.0.1.tgz
+    - "https:/doris-hsu.github.io/charts/\r/deprepo-1.0.1.tgz"
     version: 1.0.1
   digits-test:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-02-18T16:57:29.2079036+08:00"
+    created: "2022-02-18T17:17:53.8327196+08:00"
     description: A Helm chart for Kubernetes
     digest: 41277545c609e23d4665229e541919e105a5ed9706ffe171bde505e3e2205f4c
     name: digits-test
     urls:
-    - https://doris-hsu.github.io/charts/digits-test-0.1.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/digits-test-0.1.0.tgz"
     version: 0.1.0
   dryrun-failed:
   - apiVersion: v1
     appVersion: 5.0.0
-    created: "2022-02-18T16:57:29.2139728+08:00"
+    created: "2022-02-18T17:17:53.8405074+08:00"
     description: NVIDIA's Deepstream Helm Chart
     digest: 6f610c17dff0d9daec7d5cbed77896c535e602c08ed3949f708e9b19b30ced4b
     name: dryrun-failed
     urls:
-    - https://doris-hsu.github.io/charts/dryrun-failed-5.0.1.tgz
+    - "https:/doris-hsu.github.io/charts/\r/dryrun-failed-5.0.1.tgz"
     version: 5.0.1
   egxqatest-caffe-pubrepo:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-02-18T16:57:29.221102+08:00"
+    created: "2022-02-18T17:17:53.8548695+08:00"
     description: A Helm chart for Kubernetes on egxqatest only
     digest: 765a5a80b31a742ee4b9c67e9c6488ac227679054b8f54f08023cc96285ab89b
     name: egxqatest-caffe-pubrepo
     urls:
-    - https://doris-hsu.github.io/charts/egxqatest-caffe-pubrepo-0.1.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/egxqatest-caffe-pubrepo-0.1.0.tgz"
     version: 0.1.0
   egxqatest-centos:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2022-02-18T16:57:29.2253351+08:00"
+    created: "2022-02-18T17:17:53.8625761+08:00"
     description: MyCo's Hello World 1 sample Helm Chart
     digest: 47d6b18da8fc22400160f424f79477a6812e76cec14ec4056bcf60a5c5d883b4
     name: egxqatest-centos
     urls:
-    - https://doris-hsu.github.io/charts/egxqatest-centos-2.0.3.tgz
+    - "https:/doris-hsu.github.io/charts/\r/egxqatest-centos-2.0.3.tgz"
     version: 2.0.3
   egxqatest-nginx:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-02-18T16:57:29.229754+08:00"
+    created: "2022-02-18T17:17:53.8707947+08:00"
     description: A Helm chart for Kubernetes
     digest: 99e1f85f0ce62f8fce6a4ec0a74159195e82d218d26e61218d30edbc24606756
     name: egxqatest-nginx
     urls:
-    - https://doris-hsu.github.io/charts/egxqatest-nginx-0.0.1.tgz
+    - "https:/doris-hsu.github.io/charts/\r/egxqatest-nginx-0.0.1.tgz"
     version: 0.0.1
   gpu-hog:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-02-18T16:57:29.2336851+08:00"
+    created: "2022-02-18T17:17:53.8779714+08:00"
     description: A Helm chart to produce non-stopping gpu workload
     digest: 8529801a84f3ef720eccfe1f2e6efae7247aeabd32da4aeb1040d023ce22199b
     name: gpu-hog
     urls:
-    - https://doris-hsu.github.io/charts/gpu-hog-0.1.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/gpu-hog-0.1.0.tgz"
     version: 0.1.0
   hostpathapp:
   - apiVersion: v1
     appVersion: 0.1.4
-    created: "2022-02-18T16:57:29.2377634+08:00"
+    created: "2022-02-18T17:17:53.886333+08:00"
     description: A Helm chart for HostPathApp
     digest: d986b1fa4d520719a71d6eafdced6ff2557b02383db9870827eb6cd8b14c29be
     name: hostpathapp
     type: application
     urls:
-    - https://doris-hsu.github.io/charts/hostpathapp-0.1.5.tgz
+    - "https:/doris-hsu.github.io/charts/\r/hostpathapp-0.1.5.tgz"
     version: 0.1.5
   hostpathappimg:
   - apiVersion: v1
     appVersion: 0.1.4
-    created: "2022-02-18T16:57:29.2422895+08:00"
+    created: "2022-02-18T17:17:53.8941826+08:00"
     description: A Helm chart for HostPathApp
     digest: faaca5d92d1e01b403bb265367fdbe4696cdcc3d90af583391bf69039504c0eb
     name: hostpathappimg
     type: application
     urls:
-    - https://doris-hsu.github.io/charts/hostpathappimg-0.1.7.tgz
+    - "https:/doris-hsu.github.io/charts/\r/hostpathappimg-0.1.7.tgz"
     version: 0.1.7
   jarvis-egxdefault:
   - apiVersion: v1
     appVersion: 1.0.0-b.1
-    created: "2022-02-18T16:57:29.2474682+08:00"
+    created: "2022-02-18T17:17:53.9026054+08:00"
     description: Jarvis Speech Services
     digest: 2c5a8e77880a5b0ea83e05b0db554a135ec7d81140c4a3636e1553ae98a5edec
     name: jarvis-egxdefault
     urls:
-    - https://doris-hsu.github.io/charts/jarvis-egxdefault-1.0.0-b.1.tgz
+    - "https:/doris-hsu.github.io/charts/\r/jarvis-egxdefault-1.0.0-b.1.tgz"
     version: 1.0.0-b.1
   kafka:
   - apiVersion: v1
     appVersion: 2.6.0
-    created: "2022-02-18T16:57:29.2541042+08:00"
+    created: "2022-02-18T17:17:53.9099922+08:00"
     description: A Helm chart for MDX Strimzi kafka cluster
     digest: 710695f0e358af4c405ea87c32566fde9f6694ee173b5b2d057449f060a83eb9
     name: kafka
     urls:
-    - https://doris-hsu.github.io/charts/kafka-0.2.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/kafka-0.2.0.tgz"
     version: 0.2.0
   liveness:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: "2022-02-18T16:57:29.2599974+08:00"
+    created: "2022-02-18T17:17:53.9178154+08:00"
     description: A Helm chart for liveness test
     digest: fb959fcb906c44fc4980fafe826e238f77257ef25bc528540156ae613cfe774e
     name: liveness
     type: application
     urls:
-    - https://doris-hsu.github.io/charts/liveness-0.1.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/liveness-0.1.0.tgz"
     version: 0.1.0
   local-path-provisioner:
   - apiVersion: v1
     appVersion: v0.0.19
-    created: "2022-02-18T16:57:29.2706863+08:00"
+    created: "2022-02-18T17:17:53.9368701+08:00"
     description: Use HostPath for persistent local storage with Kubernetes
     digest: f3a26b291522f54460826bba0f6ef96d9252333c0a8851ba4af9e4779d4b3087
     home: https://github.com/rancher/local-path-provisioner
@@ -215,11 +215,11 @@ entries:
     sources:
     - https://github.com/rancher/local-path-provisioner.git
     urls:
-    - https://doris-hsu.github.io/charts/local-path-provisioner-0.0.19.tgz
+    - "https:/doris-hsu.github.io/charts/\r/local-path-provisioner-0.0.19.tgz"
     version: 0.0.19
   - apiVersion: v1
     appVersion: v0.0.14
-    created: "2022-02-18T16:57:29.2661029+08:00"
+    created: "2022-02-18T17:17:53.9288331+08:00"
     description: Use HostPath for persistent local storage with Kubernetes
     digest: beb656a82c5d8d3b07020cea30b98bd4bfc152ee76488383353cdd6cc32c4ab1
     home: https://github.com/rancher/local-path-provisioner
@@ -231,33 +231,33 @@ entries:
     sources:
     - https://github.com/rancher/local-path-provisioner.git
     urls:
-    - https://doris-hsu.github.io/charts/local-path-provisioner-0.0.14.tgz
+    - "https:/doris-hsu.github.io/charts/\r/local-path-provisioner-0.0.14.tgz"
     version: 0.0.14
   memory-demo:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: "2022-02-18T16:57:29.2747202+08:00"
+    created: "2022-02-18T17:17:53.944037+08:00"
     description: A Helm chart for memory oomkilled test
     digest: 15fa0fe32973d55acd797442da9ca0be00e5bc6c4dfa300c2d017fdb5098f801
     name: memory-demo
     type: application
     urls:
-    - https://doris-hsu.github.io/charts/memory-demo-0.1.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/memory-demo-0.1.0.tgz"
     version: 0.1.0
   myco-hello-1:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2022-02-18T16:57:29.2795374+08:00"
+    created: "2022-02-18T17:17:53.9515561+08:00"
     description: MyCo's Hello World 1 sample Helm Chart
     digest: 45167bcb9a09c4959515297d12b3a0008182e2316a9f791351f6bdcfcbdb9aa6
     name: myco-hello-1
     urls:
-    - https://doris-hsu.github.io/charts/myco-hello-1-2.0.2.tgz
+    - "https:/doris-hsu.github.io/charts/\r/myco-hello-1-2.0.2.tgz"
     version: 2.0.2
   nginx-helm-dependance:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2022-02-18T16:57:29.2845412+08:00"
+    created: "2022-02-18T17:17:53.9591866+08:00"
     dependencies:
     - name: tdcsqa-nginx-doris
       repository: https://leow1986.github.io/charts/
@@ -266,12 +266,12 @@ entries:
     digest: e7ae6cbfae849920d5fa2bf35932fb600c7f4324de68700e74375aefbc0a06a4
     name: nginx-helm-dependance
     urls:
-    - https://doris-hsu.github.io/charts/nginx-helm-dependance-1.0.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/nginx-helm-dependance-1.0.0.tgz"
     version: 1.0.0
   nginx-ingres-controller:
   - apiVersion: v1
     appVersion: 0.26.1
-    created: "2022-02-18T16:57:29.2922304+08:00"
+    created: "2022-02-18T17:17:53.9700181+08:00"
     dependencies:
     - name: nginx-ingress
       repository: https://kubernetes-charts.storage.googleapis.com
@@ -280,22 +280,22 @@ entries:
     digest: cc7b17240a8def890be106c413244e14e1b1a5b99fb91ed8e3b018ab2017ed31
     name: nginx-ingres-controller
     urls:
-    - https://doris-hsu.github.io/charts/nginx-ingres-controller-0.2.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/nginx-ingres-controller-0.2.0.tgz"
     version: 0.2.0
   nginx-ns:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2022-02-18T16:57:29.2984708+08:00"
+    created: "2022-02-18T17:17:53.9792926+08:00"
     description: MyCo's Hello World 1 sample Helm Chart
     digest: 0bba4f3300305c3162bfc73aae9d319fcc990d9386b00598c8f5258bca55eeee
     name: nginx-ns
     urls:
-    - https://doris-hsu.github.io/charts/nginx-ns-2.0.4.tgz
+    - "https:/doris-hsu.github.io/charts/\r/nginx-ns-2.0.4.tgz"
     version: 2.0.4
   ns-dependency3:
   - apiVersion: v1
     appVersion: 1.0.1
-    created: "2022-02-18T16:57:29.3050525+08:00"
+    created: "2022-02-18T17:17:53.9892849+08:00"
     dependencies:
     - name: ns1
       repository: file://../ns1
@@ -310,73 +310,73 @@ entries:
     digest: 704426cdbc0b2fbdc146a035c06f0276c443bebe26766362dfb28619dd2420c0
     name: ns-dependency3
     urls:
-    - https://doris-hsu.github.io/charts/ns-dependency3-1.0.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/ns-dependency3-1.0.0.tgz"
     version: 1.0.0
   ns-test:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2022-02-18T16:57:29.3106714+08:00"
+    created: "2022-02-18T17:17:53.9976364+08:00"
     description: MyCo's Hello World 1 sample Helm Chart
     digest: 44803f17a3ed073f450bff1a850e3e731a43fcf353a0bf4cf92f7f622575ebaa
     name: ns-test
     urls:
-    - https://doris-hsu.github.io/charts/ns-test-2.0.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/ns-test-2.0.0.tgz"
     version: 2.0.0
   ns3:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2022-02-18T16:57:29.3166628+08:00"
+    created: "2022-02-18T17:17:54.0063422+08:00"
     description: MyCo's Hello World 1 sample Helm Chart
     digest: 79d29d618cbec5c1dfbb91de7fe38557959c56820a49c6796478272ec9179cc6
     name: ns3
     urls:
-    - https://doris-hsu.github.io/charts/ns3-2.0.1.tgz
+    - "https:/doris-hsu.github.io/charts/\r/ns3-2.0.1.tgz"
     version: 2.0.1
   pause-app-test:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: "2022-02-18T16:57:29.3209551+08:00"
+    created: "2022-02-18T17:17:54.0140597+08:00"
     description: A Helm chart for Pause-App
     digest: ee046e789e80ba6dd21d377861d5760ac290c224fc5d0b3a09a672273b2b80e1
     name: pause-app-test
     type: application
     urls:
-    - https://doris-hsu.github.io/charts/pause-app-test-0.1.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/pause-app-test-0.1.0.tgz"
     version: 0.1.0
   privileged-true:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2022-02-18T16:57:29.3253716+08:00"
+    created: "2022-02-18T17:17:54.0229424+08:00"
     description: privileged-true sample Helm Chart
     digest: fcc2830ab271efce11c5ca74360cf1622c72df658ad128fb32ba64d0d64b58b3
     name: privileged-true
     urls:
-    - https://doris-hsu.github.io/charts/privileged-true-2.0.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/privileged-true-2.0.0.tgz"
     version: 2.0.0
   prod-isaac-ml-training:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-02-18T16:57:29.3298127+08:00"
+    created: "2022-02-18T17:17:54.0304722+08:00"
     description: A Helm chart for Kubernetes
     digest: fda690ba279187c7431f32a6ffa5e40fd049c045bd316bb36af1920cc482f8a3
     name: prod-isaac-ml-training
     urls:
-    - https://doris-hsu.github.io/charts/prod-isaac-ml-training-0.1.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/prod-isaac-ml-training-0.1.0.tgz"
     version: 0.1.0
   public-reg-private-caffe-py2:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-02-18T16:57:29.3345711+08:00"
+    created: "2022-02-18T17:17:54.0382074+08:00"
     description: caffe in privage org
     digest: e9a7fdfa5eb33e5edb1a2a9b43ae4ea7662ec40cceb21c403e21e598d0f1b5db
     name: public-reg-private-caffe-py2
     urls:
-    - https://doris-hsu.github.io/charts/public-reg-private-caffe-py2-0.2.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/public-reg-private-caffe-py2-0.2.0.tgz"
     version: 0.2.0
   spark-operator:
   - apiVersion: v1
     appVersion: v1beta2-1.0.1-2.4.4
-    created: "2022-02-18T16:57:29.3414352+08:00"
+    created: "2022-02-18T17:17:54.0481528+08:00"
     dependencies:
     - name: sparkoperator
       repository: https://kubernetes-charts-incubator.storage.googleapis.com
@@ -385,36 +385,36 @@ entries:
     digest: 0a07c4a2dc9342ac3ad4899d95bf42166ef2b579f87c991e9bdded60d2239e64
     name: spark-operator
     urls:
-    - https://doris-hsu.github.io/charts/spark-operator-0.2.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/spark-operator-0.2.0.tgz"
     version: 0.2.0
   triton-inference-server:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-02-18T16:57:29.3462831+08:00"
+    created: "2022-02-18T17:17:54.0562825+08:00"
     description: Triton Inference Server Helm Chart
     digest: fe2e4628baceae775f1bf4f4417ff7622d9dfa4f91a8187a52c7c5b5c08140c7
     name: triton-inference-server
     urls:
-    - https://doris-hsu.github.io/charts/triton-inference-server-0.2.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/triton-inference-server-0.2.0.tgz"
     version: 0.2.0
   ui:
   - apiVersion: v1
     appVersion: v0.2
-    created: "2022-02-18T16:57:29.3509901+08:00"
+    created: "2022-02-18T17:17:54.0639457+08:00"
     description: A Helm chart for Kubernetes
     digest: 9ac5431b0ee27b8ce2ea20e2a6c73ab68f348c5732b6046cb0d96be8003d9ad8
     name: ui
     urls:
-    - https://doris-hsu.github.io/charts/ui-0.2.0.tgz
+    - "https:/doris-hsu.github.io/charts/\r/ui-0.2.0.tgz"
     version: 0.2.0
   video-analytics-demo:
   - apiVersion: v1
     appVersion: "1.2"
-    created: "2022-02-18T16:57:29.3558175+08:00"
+    created: "2022-02-18T17:17:54.0729025+08:00"
     description: A Helm chart for Deepstream Intelligent Video Analytics
     digest: 621c741f798e2e11ba317f603209161f9a74d52f059dd01aecaafb955129a56a
     name: video-analytics-demo
     urls:
-    - https://doris-hsu.github.io/charts/video-analytics-demo-0.1.5.tgz
+    - "https:/doris-hsu.github.io/charts/\r/video-analytics-demo-0.1.5.tgz"
     version: 0.1.5
-generated: "2022-02-18T16:57:29.1658917+08:00"
+generated: "2022-02-18T17:17:53.7531035+08:00"
